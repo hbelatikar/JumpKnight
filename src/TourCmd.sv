@@ -1,3 +1,4 @@
+
 module TourCmd(clk,rst_n,start_tour,move,mv_indx,
                cmd_UART,cmd,cmd_rdy_UART,cmd_rdy,
 			   clr_cmd_rdy,send_resp,resp);
@@ -13,7 +14,7 @@ module TourCmd(clk,rst_n,start_tour,move,mv_indx,
   input clr_cmd_rdy;		// from cmd_proc (goes to UART_wrapper too)
   input send_resp;			// lets us know cmd_proc is done with command
   output [7:0] resp;		// either 0xA5 (done) or 0x5A (in progress)
-  
+
 	//Defining Local Params & Typedefs
 	//Logic for storing decomposed movement commands
 	logic [15:0] Y_cmd, X_cmd, cmd_TOUR;
@@ -26,7 +27,7 @@ module TourCmd(clk,rst_n,start_tour,move,mv_indx,
 	
 	//Total Moves Required for completion
 	localparam LAST_MOVE_INDX = 5'd23;
-	
+
 	//One hot encoded movement command from TourLogic
 	typedef enum logic [7:0] {	N2W1 = 8'b0000_0001,
 								N2E1 = 8'b0000_0010,
@@ -36,8 +37,9 @@ module TourCmd(clk,rst_n,start_tour,move,mv_indx,
 								S2E1 = 8'b0010_0000,
 								E2S1 = 8'b0100_0000,
 								E2N1 = 8'b1000_0000 } encoded_move_t;
-	encoded_move_t move;
+	encoded_move_t encoded_move;
 	
+	assign encoded_move = encoded_move_t'(move);
 	localparam	MOVE 	 = 4'b0010,	//Opcode to move knight 
 				MOVE_FAN = 4'b0011; //Opcode to move knight with fan fare
 				
@@ -46,10 +48,9 @@ module TourCmd(clk,rst_n,start_tour,move,mv_indx,
 				ONE_SQUARE = 4'b0001; 
 				
 	//Defining internal logic
-	logic 	usurp, usurped_cmd_rdy,
+	logic 	usurp, cmd_rdy_TOUR,
 			mv_vert_or_horiz,		// Vertical=>0 Horizontal => 1
-			inc_mv, clr_mv_indx, 
-			cmd_rdy_TOUR;
+			inc_mv, clr_mv_indx;
 	
 	//Generating the move index counter
 	always_ff @(posedge clk, negedge rst_n)
@@ -70,7 +71,7 @@ module TourCmd(clk,rst_n,start_tour,move,mv_indx,
 	
 	//Generating logic for move decomposition
 	always_comb begin
-		case(move)
+		case(encoded_move)
 			N2W1 : begin
 				Y_cmd = {MOVE	  , NORTH , TWO_SQUARE};	//
 				X_cmd = {MOVE_FAN , WEST  , ONE_SQUARE};
@@ -82,13 +83,13 @@ module TourCmd(clk,rst_n,start_tour,move,mv_indx,
 			end
 			
 			W2N1 : begin
-				Y_cmd = {MOVE	  , WEST  , TWO_SQUARE};
-				X_cmd = {MOVE_FAN , NORTH , ONE_SQUARE};
+				Y_cmd = {MOVE	  , NORTH , ONE_SQUARE};
+				X_cmd = {MOVE_FAN , WEST  , TWO_SQUARE};
 			end
 			
 			W2S1 : begin
-				Y_cmd = {MOVE	  , WEST  , TWO_SQUARE};
-				X_cmd = {MOVE_FAN , SOUTH , ONE_SQUARE};
+				Y_cmd = {MOVE	  , SOUTH , ONE_SQUARE};
+				X_cmd = {MOVE_FAN , WEST  , TWO_SQUARE};
 			end
 			
 			S2W1 : begin
@@ -102,19 +103,24 @@ module TourCmd(clk,rst_n,start_tour,move,mv_indx,
 			end
 			
 			E2S1 : begin
-				Y_cmd = {MOVE	  , EAST  , TWO_SQUARE};
-				X_cmd = {MOVE_FAN , SOUTH , ONE_SQUARE};
+				Y_cmd = {MOVE	  , SOUTH , ONE_SQUARE};
+				X_cmd = {MOVE_FAN , EAST  , TWO_SQUARE};
 			end
 			
 			E2N1 : begin
-				Y_cmd = {MOVE	  , EAST  , TWO_SQUARE};
-				X_cmd = {MOVE_FAN , NORTH , ONE_SQUARE};
+				Y_cmd = {MOVE	  , NORTH , ONE_SQUARE};
+				X_cmd = {MOVE_FAN , EAST  , TWO_SQUARE};
+			end
+
+			default : begin
+				Y_cmd = 16'h0000;
+				X_cmd = 16'h0000;
 			end
 		endcase
-	end
-	
+	end 
+
 	//Select between the generated vertical or horizontal move 
-	assign cmd_TOUR = mv_vert_or_horiz ? Y_cmd : X_cmd;
+	assign cmd_TOUR = mv_vert_or_horiz ? X_cmd : Y_cmd;
 	//If usurp is high send out tour commands
 	assign cmd = usurp ? cmd_TOUR : cmd_UART;
 	//If usurp is high cmd_rdy is set by TourCmd
@@ -138,7 +144,7 @@ module TourCmd(clk,rst_n,start_tour,move,mv_indx,
 		usurp = 1'b0;
 		clr_mv_indx = 1'b0;
 		inc_mv = 1'b0;
-		usurped_cmd_rdy = 1'b0;
+		cmd_rdy_TOUR = 1'b0;
 		mv_vert_or_horiz = 1'b0;
 		
 		case(state)
@@ -155,7 +161,6 @@ module TourCmd(clk,rst_n,start_tour,move,mv_indx,
 				usurp = 1'b1;
 				cmd_rdy_TOUR = 1'b1;
 				if(clr_cmd_rdy) begin
-					cmd_rdy_TOUR = 1'b0;
 					n_state = Y_HOLD;
 				end
 			end
@@ -173,7 +178,6 @@ module TourCmd(clk,rst_n,start_tour,move,mv_indx,
 				mv_vert_or_horiz = 1'b1;
 				cmd_rdy_TOUR = 1'b1;
 				if(clr_cmd_rdy) begin
-					cmd_rdy_TOUR = 1'b0;
 					n_state = X_HOLD;
 				end
 			end
