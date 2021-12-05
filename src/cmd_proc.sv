@@ -7,10 +7,10 @@ input clk, rst_n;
 
 output logic clr_cmd_rdy, send_resp, tour_go, strt_cal, moving, fanfare_go;
 output logic [9:0] frwrd;
-output [11:0] error;
+output signed [11:0] error;
 
 input [15:0] cmd;
-input [11:0] heading;
+input signed [11:0] heading;
 input cmd_rdy, heading_rdy, cal_done, lftIR, cntrIR, rghtIR;
 
 logic move_cmd, ff_move, inc_frwrd, dec_frwrd, move_done, flag;
@@ -188,7 +188,7 @@ assign move_done = (sq_count == sq_cmd) ? 1'b1 : 1'b0;
 	// PID Interface
 	
 	logic en_desired_heading;
-	logic [11:0] desired_heading, cmd_heading;
+	logic signed [11:0] desired_heading, cmd_heading;
 	logic signed [11:0] err_nudge;
 
 	assign err_nudge = FAST_SIM & lftIR ? 12'h1FF : lftIR ? 12'h05F : FAST_SIM & rghtIR ? 12'hE00 : rghtIR ? 12'hFA1 : 12'h0000;
