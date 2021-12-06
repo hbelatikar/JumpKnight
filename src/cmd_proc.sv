@@ -187,7 +187,6 @@ assign move_done = (sq_count == sq_cmd) ? 1'b1 : 1'b0;
 			
 	// PID Interface
 	
-	logic en_desired_heading;
 	logic signed [11:0] desired_heading, cmd_heading;
 	logic signed [11:0] err_nudge;
 
@@ -199,7 +198,7 @@ assign move_done = (sq_count == sq_cmd) ? 1'b1 : 1'b0;
 	always_ff @(posedge clk, negedge rst_n)
 		if (!rst_n)
 			desired_heading <= 12'h000;
-		else if (en_desired_heading)
+		else if (move_cmd)
 			desired_heading <= cmd_heading;
 			
 	assign error = heading - desired_heading + err_nudge;
