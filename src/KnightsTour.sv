@@ -47,7 +47,7 @@ module KnightsTour(
   /////////////////////////////////////
   // Instantiate reset synchronizer //
   ///////////////////////////////////
-  reset_synch iRST(.*);
+  reset_synch iRST(.RST_n(RST_n), .clk(clk), .rst_n(rst_n));
  
   ///////////////////////////////////////////////////
   // UART_wrapper receives 16-bit command via BLE //

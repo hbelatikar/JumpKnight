@@ -7,6 +7,7 @@ module reset_synch (RST_n, clk, rst_n);
 	logic FF1;
 	logic FF2;
 	
+	//Double flop the reset to 1 to allow synchronisation across reset pins
 	always @(posedge clk, negedge RST_n)
 		if(!RST_n) begin
 			FF1 <= 0;

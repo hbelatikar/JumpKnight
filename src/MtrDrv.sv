@@ -7,9 +7,11 @@ module MtrDrv (
 	
 	logic signed [10:0] Lduty, Rduty;
 	
+	//Instantiate the PWM drivers for both the Left and right motors
 	PWM11 LModulator (.clk(clk), .rst_n(rst_n), .duty(Lduty), .PWM_sig(lftPWM2), .PWM_sig_n(lftPWM1));
 	PWM11 RModulator (.clk(clk), .rst_n(rst_n), .duty(Rduty), .PWM_sig(rghtPWM2), .PWM_sig_n(rghtPWM1));
 	
+	//Add the offset to set duty cycle in center
 	assign Lduty = $signed(lft_spd)  + 11'h400;
 	assign Rduty = $signed(rght_spd) + 11'h400;
 	
