@@ -1,6 +1,6 @@
 module KnightsTour_tb();
 
-  << import or include tasks?>>
+  // << import or include tasks?>>
     
   
   /////////////////////////////
@@ -35,8 +35,8 @@ module KnightsTour_tb();
   /////////////////////////////////////////////////////
   // Instantiate RemoteComm to send commands to DUT //
   ///////////////////////////////////////////////////
-  << This is my remoteComm.  It is possible yours has a slight variation
-     in port names>>
+  // << This is my remoteComm.  It is possible yours has a slight variation
+  //  in port names>>
   RemoteComm iRMT(.clk(clk), .rst_n(RST_n), .RX(RX_TX), .TX(TX_RX), .cmd(cmd),
              .send_cmd(send_cmd), .cmd_sent(cmd_sent), .resp_rdy(resp_rdy), .resp(resp));
 				   
@@ -50,7 +50,7 @@ module KnightsTour_tb();
 				   
   initial begin
   
-    << Your magic here >>
+    // << Your magic here >>
 	
   end
   
