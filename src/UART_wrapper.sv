@@ -21,9 +21,9 @@ module UART_wrapper (
 	
 	//Instantitate the UART
 	UART iU_UWRP	(.clk(clk),.rst_n(rst_n),.RX(RX),.TX(TX),
-				 .rx_rdy(rx_rdy),.clr_rx_rdy(clr_rx_rdy),
-				 .rx_data(rx_data),.trmt(trmt),.tx_data(resp),
-				 .tx_done(tx_done));
+				 	.rx_rdy(rx_rdy),.clr_rx_rdy(clr_rx_rdy),
+				 	.rx_data(rx_data),.trmt(trmt),.tx_data(resp),
+				 	.tx_done(tx_done));
 
 	//State enumerators
 	typedef enum logic {MSB, LSB} t_state;
@@ -46,10 +46,10 @@ module UART_wrapper (
 	begin
 		if(!rst_n)
 			cmd_rdy <= 1'b0;
-		else if (clr_cmd_rdy | rx_rdy)
-			cmd_rdy <= 1'b0;
 		else if (set_cmd_rdy)
 			cmd_rdy <= 1'b1;
+		else if (clr_cmd_rdy | rx_rdy)
+			cmd_rdy <= 1'b0;
 	end
 	
 	//State registers w.r.t clk
