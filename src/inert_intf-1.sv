@@ -4,7 +4,7 @@
 // heading of robot.  Fusion correction comes    //
 // from "gaurdrail" signals lftIR/rghtIR.       //
 /////////////////////////////////////////////////
-module inert_intf(clk,rst_n,strt_cal,cal_done,heading,rdy,lftIR,
+module inert_intf_1(clk,rst_n,strt_cal,cal_done,heading,rdy,lftIR,
                   rghtIR,SS_n,SCLK,MOSI,MISO,INT,moving);
 
   parameter FAST_SIM = 1;	// used to speed up simulation

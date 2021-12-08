@@ -1,1 +1,4 @@
 *.sv.bak
+output_file.txt
+transcript
+**/rtl_work/

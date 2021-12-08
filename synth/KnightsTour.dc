@@ -1,0 +1,65 @@
+ ##################################################
+ ######## Reading the SVerilog Files ##############
+ ##################################################
+ read_file -format sverilog {PID.sv}
+ link
+ 
+ ##################################################
+ ########### Set top level module ################
+ ##################################################
+ set current_design PID
+ 
+ ##################################################
+ ########### Assign and Constraint Clk ############
+ ##################################################
+ create_clock -name "clk" -period 2 -waveform {0 1} clk
+ set_dont_touch_network [find port clk] 
+ 
+############################################
+##### Constraint input timings & drive #####
+############################################
+set prim_inputs [remove_from_collection [all_inputs] [find port clk]]
+set prim_inputs_no_rst_n [remove_from_collection $prim_inputs [find port rst_n]]
+set_input_delay -clock clk 0.4 $prim_inputs
+set_driving_cell -lib_cell NAND2X2_LVT -library saed32lvt_tt0p85v25c $prim_inputs_no_rst_n
+#set_drive 0.1 rst_n
+
+############################################
+##### Constraint Output timing & loads #####
+############################################
+set_output_delay -clock clk 0.4 [all_outputs]
+set_load 0.1 [all_outputs]
+
+#############################################
+##### Constraint wire load & transition #####
+#############################################
+set_max_transition 0.15 [current_design]
+set_wire_load_model -name 16000 -library saed32lvt_tt0p85v25c
+
+###############################
+##### Compile the design  #####
+###############################
+compile -map_effort medium
+
+################################
+##### Unflatten Hierarchy  #####
+################################
+ungroup -all -flatten
+
+#####################################
+##### Compile the design again  #####
+#####################################
+compile -map_effort medium
+
+##########################################
+##### Generate Timing & Are Reports  #####
+##########################################
+report_timing -delay max > PID_max_delay.rpt
+report_timing -delay min > PID_min_delay.rpt
+report_area > PID_area.txt
+
+##########################################
+##### Write out resulting netlist ########
+##########################################
+write -format verilog PID -output PID.vg
+write_sdc PID.sdc
