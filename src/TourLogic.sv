@@ -13,7 +13,7 @@ module TourLogic (clk,rst_n,x_start,y_start,go,done,indx,move);
 	
 	logic [4:0] board [0:4] [0:4];		//<< 2-D array of 5-bit vectors that keep track of where on the board the knight has visited. Will be reduced to 1-bit boolean after debug phase >>
 	logic [4:0] last_move [0:23];				//<< 1-D array (of size 24) to keep track of last move taken from each move index >>
-	logic [4:0] poss_moves [0:23];			//<< 1-D array (of size 24) to keep track of possible moves from each move index >>
+	logic [7:0] poss_moves [0:23];			//<< 1-D array (of size 24) to keep track of possible moves from each move index >>
 	logic [7:0] move_try;				//<< move_try ... not sure you need this.  I had this to hold move I would try next >>
 	logic [4:0] move_num;				//...when you have moved 24 times you are done.  Decrement when backing up >>
 	logic [2:0] xx;
@@ -21,7 +21,7 @@ module TourLogic (clk,rst_n,x_start,y_start,go,done,indx,move);
 	localparam total_moves = 24;
 	integer possible_move;
 	integer a, b, i, j, x, xoff, yoff;
-	logic update_position, init_board, start, init_move_try, making_move,  incr_move_num, shift_left, decr_move_num, back_up, update_pos;
+	logic update_position, init_board, start, init_move_try, making_move,  incr_move_num, shift_left, decr_move_num, back_up, update_pos, calc,last;
 		
 	// Defining offsets for every possible move
 	always_comb begin
@@ -53,11 +53,11 @@ module TourLogic (clk,rst_n,x_start,y_start,go,done,indx,move);
 			end
 			8'b0100_0000: begin
 				xoff = 2;
-				yoff = 1;
+				yoff = -1;
 			end
 			8'b1000_0000: begin
 				xoff = 2;
-				yoff = -1;
+				yoff = 1;
 			end
 		endcase
 	end
@@ -89,7 +89,7 @@ module TourLogic (clk,rst_n,x_start,y_start,go,done,indx,move);
 		end
 	else if(making_move)
 		begin 
-		board[xx + xoff][yy + yoff] <= move_num + 1;
+		board[xx + xoff][yy + yoff] <= move_num + 2;
 		end
 	else if(back_up)
 		board[xx][yy] = 0;					//# since we are backing up we have no longer visited this square
@@ -144,7 +144,12 @@ always_ff@(posedge clk, negedge rst_n)
 	else 
 	update_position<=1'b0;
 	end
-
+//update poss_moves ff
+always_ff@(posedge clk)
+	begin 
+	if(calc)
+	poss_moves[move_num] <= calc_poss(xx, yy); // # determine all possible moves from this square
+	end
 //move number pos ff
 always_ff@(posedge clk, negedge rst_n)
 	begin 
@@ -155,6 +160,12 @@ always_ff@(posedge clk, negedge rst_n)
 	else if(decr_move_num)
 		move_num<=move_num-1;
 	end
+always_ff@(posedge clk)
+	begin 
+	if(last)
+	last_move[move_num] <= move_try;
+
+end
 	//Defining States
 	typedef enum logic [2:0] {IDLE, INIT, POSSIBLE, MAKE_MOVE, BACKUP} state_t;
 	state_t state, nxt_state;
@@ -181,7 +192,8 @@ always_ff@(posedge clk, negedge rst_n)
 		decr_move_num=1'b0;
 		back_up=1'b0;
 		update_pos=1'b0;
-
+		calc=1'b0;
+		last=1'b0;
 		case (state)
 
 			IDLE:	
@@ -201,7 +213,7 @@ always_ff@(posedge clk, negedge rst_n)
 				init_move_try = 1'b1;				//## always start with LSB move
 				//$display("possible", move_try);
 				//$display("possible", move_num);
-				poss_moves[move_num] = calc_poss(xx, yy); // # determine all possible moves from this square
+				calc=1'b1;
 				//$display("hello",poss_moves[move_num]);
 				//$display("possible 1", calc_poss(xx, yy));
 				nxt_state = MAKE_MOVE;
@@ -210,13 +222,13 @@ always_ff@(posedge clk, negedge rst_n)
 			MAKE_MOVE:
 				begin
 				//$display("making move", move_num);
-				//$display("making move 1", move_try);
+				$display("making move 2,%h,%h", move_try, poss_moves[move_num]);
 				//$display("zzzzzzzzzzzzzzzzzzzzzzzzzzzzz", (poss_moves[move_num] & move_try) && (board[xx + xoff][yy + yoff] == 0));
-				if ((|poss_moves[move_num] & (|move_try)) && (board[$signed (xx) +$signed(xoff)][$signed(yy) + $signed(yoff)] == 0)) begin //## move possible
+				if ((poss_moves[move_num] & (move_try)) /*&& (board[(xx) +$signed(xoff)][$signed(yy) + $signed(yoff)] == 0)*/) begin //## move possible
 				
 					making_move=1'b1;	
 					update_pos = 1'b1;
-					last_move[move_num] = move_try;
+					last=1'b1;
 					if (move_num == 23) begin //# we are done!
 						done = 1'b1;
 						nxt_state = IDLE;
@@ -252,30 +264,28 @@ always_ff@(posedge clk, negedge rst_n)
 	end
 
 	assign move = move_try;
-	logic [7:0] try;
-logic [4:0] possible_move_local;
+	
 	function [7:0] calc_poss(input [2:0] xpos,ypos);
 		///////////////////////////////////////////////////
 		// Consider writing a function that returns a packed byte of
 		// all the possible moves (at least in bound) moves given
 		// coordinates of Knight.
 		/////////////////////////////////////////////////////
-		possible_move_local = 5'b0;
 		
-		assign try = 8'b0000_0001;	//## Start with LSB
+		logic [7:0] try;
+		logic [7:0] possible_move_local;
+		possible_move_local = 8'b00000000;
+		try = 8'b0000_0001;	//## Start with LSB
 		for (x=0; x<8; x++) begin
-//$display("I am inside for loop");
-$display("xx:", xpos ,"xoff:", off_x(try) , "yy", ypos ,"yoff", off_y(try) , try);
-//$display("A",(xpos + off_x(try) >= 0));
-//$display("B",(xpos + off_x(try) < 5) );
-//$display("C",(ypos + off_y(try) >= 0));
-//$display("D",(ypos + off_y(try) < 5));
-$display("result", (($signed(xpos) + $signed(off_x(try)) >= 0) && ($signed (xpos) + $signed (off_x(try)) < 5) && ($signed(ypos) + $signed(off_y(try)) >= 0) && (ypos + off_y(try) < 5)));
-			if (($signed(xpos) + $signed(off_x(try)) >= 0) && ($signed (xpos) + $signed (off_x(try)) < 5) && ($signed(ypos) + $signed(off_y(try)) >= 0) && ($signed (ypos) + $signed(off_y(try)) < 5)) begin
-				//## if location tried is in bounds
+		//$display("I am inside for loop");
+		$display("xx:", xpos ,"xoff:", off_x(try) , "yy", ypos ,"yoff", off_y(try) , try);
+		$display("result", ((xpos) +(off_x(try)) < 3'h5) &&  (ypos + off_y(try) < 3'h5));
+			if (((xpos) +(off_x(try)) < 3'h5) &&  (ypos + off_y(try) < 3'h5)) begin
+			
 				$display("I am inside if");
+				$display("value:", board[(xpos) + (off_x(try))][(ypos) +(off_y(try))]);
 				if (board[(xpos) + (off_x(try))][(ypos) +(off_y(try))] == 0) begin  //## if has not been visited
-					possible_move_local = possible_move_local + 1'b1;				//## add it as a possible move
+					possible_move_local = possible_move_local | try;				//## add it as a possible move
 					$display("inside ", possible_move_local);
 				end
 			end
@@ -359,10 +369,10 @@ $display("result", (($signed(xpos) + $signed(off_x(try)) >= 0) && ($signed (xpos
 				y_offset = -2;
 			end
 			8'b0100_0000: begin
-				y_offset = 1;
+				y_offset = -1;
 			end
 			8'b1000_0000: begin
-				y_offset = -1;
+				y_offset = 1;
 			end
 		endcase
 		return y_offset;
