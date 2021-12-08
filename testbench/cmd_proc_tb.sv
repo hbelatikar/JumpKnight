@@ -106,7 +106,7 @@ module cmd_proc_tb();
 				test_fail = 1'b1;
 			end
 		join
-
+		
 		fork
 			begin : move_sound
 				$display("Starting Move without fanfare test..");
@@ -160,6 +160,8 @@ module cmd_proc_tb();
 				disable move_sound;
 			end
 		join
+		
+		/*		
 
 		fork
 			begin : move_lftIR_hit
@@ -180,7 +182,7 @@ module cmd_proc_tb();
 				disable move_lftIR_hit;
 			end
 		join
-
+		*/
 		happy_msg_printer(.test_fail(test_fail));
 
 	end
