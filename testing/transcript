@@ -1,0 +1,41 @@
+# vsim -c -do "run -all" KnightsTour_tb_PWM_NEMO_check 
+# Start time: 17:22:36 on Dec 08,2021
+# Loading sv_std.std
+# Loading work.test_package
+# Loading work.KnightsTour_tb_PWM_NEMO_check
+# Loading work.KnightsTour
+# Loading work.reset_synch
+# Loading work.UART_wrapper
+# Loading work.UART
+# Loading work.UART_tx
+# Loading work.UART_rx
+# Loading work.cmd_proc
+# Loading work.TourLogic
+# Loading work.TourCmd
+# Loading work.inert_intf
+# Loading work.SPI_mnrch
+# Loading work.inertial_integrator
+# Loading work.PID
+# Loading work.MtrDrv
+# Loading work.PWM11
+# Loading work.IR_intf
+# Loading work.PWM3
+# Loading work.charge
+# Loading work.RemoteComm
+# Loading work.KnightPhysics
+# Loading work.SPI_iNEMO4
+# Loading work.inverse_PWM11e
+# run -all
+# Writing output to -2147483645
+# TEST-1 : Performing PWM Value Check and Verifying NEMO setup.
+# TEST-1.1 : Performing PWM Value Check.
+# Motor 1 lftPWM1 Value: 1 	 lftPWM2 Value: 0
+# Motor 2 rghtPWM1 Value: 1 	 rghtPWM2 Value: 0
+# ERROR: Timed out due to PWM Values are not correct!
+# TEST-1.2 : Verifying NEMO is set up.
+# NEMO Setup DONE.
+# Your DUT FAILED the TEST 1.1 - PWM Values Check test! :( 
+# ** Note: $finish    : ../testbench/test_package.sv(59)
+#    Time: 665805 ps  Iteration: 7  Instance: /KnightsTour_tb_PWM_NEMO_check
+# End time: 17:22:38 on Dec 08,2021, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
