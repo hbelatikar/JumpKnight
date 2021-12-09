@@ -43,7 +43,7 @@ module RemoteComm (
 	end
 	
 	//Logic to clear resp_rdy
-	assign clr_rx_rdy = resp_rdy & (resp == 8'hA5);
+	assign clr_rx_rdy = resp_rdy & ((resp == 8'hA5) | (resp == 8'h5A));
 
 	//FSM State change registers
 	always_ff@(posedge clk, negedge rst_n)
