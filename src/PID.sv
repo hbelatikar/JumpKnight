@@ -1,4 +1,4 @@
-//`default_nettype none
+// `default_nettype none
 module PID (clk, rst_n, moving, err_vld, error, frwrd, lft_spd, rght_spd);
 	
 	//////////////////////////////////
@@ -44,12 +44,13 @@ module PID (clk, rst_n, moving, err_vld, error, frwrd, lft_spd, rght_spd);
 	//////////////////////////
 	
 	logic I_overflow;
-	logic [14:0]  I_sum, integrator, sign_ex_err_sat, sampled;
+	logic signed [14:0]  I_sum, integrator, sign_ex_err_sat, sampled;
 	logic signed [8:0] I_term;
 	
 	assign sign_ex_err_sat = {{5{err_sat[9]}},err_sat};	
 	
-	assign I_sum = sign_ex_err_sat + integrator;
+	// assign I_sum = sign_ex_err_sat + integrator;
+	assign I_sum = $signed(sign_ex_err_sat) + $signed(integrator);	//TODO- This was made signed.
 	
 	//New sample is valid only when err_vld & ~overflow = 1
 	assign sampled = (err_vld & ~I_overflow) ? I_sum : integrator; 

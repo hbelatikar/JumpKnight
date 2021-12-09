@@ -183,7 +183,9 @@ module cmd_proc_tb();
 			end
 		join
 		*/
-		happy_msg_printer(.test_fail(test_fail));
+		// int i = 0;
+		// happy_msg_printer(.test_fail(test_fail), .test_name("cmd_proc big"), .test_file(i), .stop_test(1));
+		$stop();
 
 	end
 

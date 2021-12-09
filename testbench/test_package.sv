@@ -39,12 +39,26 @@ package test_package;
 				
     endtask //automatic
 
-    task automatic happy_msg_printer(ref test_fail);
-        if (!test_fail) 
-            $display("Your DUT PASSED the test! :D ");
-        else
-            $display("Your DUT FAILED the test! :( ");
-        $stop();
+    task automatic happy_msg_printer(ref test_fail, int test_file, input stop_test, string test_name);
+        if(test_file) begin
+            if (!test_fail) begin
+                $fdisplay(test_file, "Your DUT PASSED the %s test! :D ", test_name);
+                $display("Your DUT PASSED the %s test! :D ", test_name);
+            end else begin
+                $fdisplay(test_file, "Your DUT FAILED the %s test! :( ", test_name);
+                $display("Your DUT FAILED the %s test! :( ", test_name);
+            end
+        end else begin
+            if (!test_fail) begin
+                $display("Your DUT PASSED the %s test! :D ", test_name);
+            end else begin
+                $display("Your DUT FAILED the %s test! :( ", test_name);
+            end 
+        end
+        if(stop_test) begin
+            $fclose(test_file);
+            $finish();
+        end
     endtask //automatic
 
 endpackage

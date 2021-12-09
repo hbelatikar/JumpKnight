@@ -1,4 +1,4 @@
-module TourLogic (clk,rst_n,x_start,y_start,go,done,indx,move);
+module TourLogic_old (clk,rst_n,x_start,y_start,go,done,indx,move);
 
 	input clk,rst_n;				// 50MHz clock and active low asynch reset
 	input [2:0] x_start, y_start;	// starting position on 5x5 board
@@ -292,7 +292,7 @@ end
 			try = {try[6:0],1'b0};
 		end
 
-		$display("possible moves ", possible_move_local);
+		// $display("possible moves ", possible_move_local);
 		return possible_move_local;
 	endfunction
 	
