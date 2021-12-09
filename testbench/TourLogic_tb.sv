@@ -10,18 +10,15 @@ module TourLogic_tb ();
     initial begin
         
         clk = 1'b0;
-        rst_n = 1'b1;
+        rst_n = 1'b0;
         go = 1'b0;
         indx = 5'b00000;
-        x_start = 3'b000;
-        y_start = 3'b000;
+        x_start = 3'b010;
+        y_start = 3'b010;
 
         // Deassert Reset
 		@(negedge clk);
-		rst_n = 1'b0;
-
-        x_start = 3'b010;
-        y_start = 3'b010;
+		rst_n = 1'b1;
 
         @(negedge clk);
         go = 1'b1;
