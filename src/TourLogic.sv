@@ -92,7 +92,7 @@ module TourLogic (clk,rst_n,x_start,y_start,go,done,indx,move);
 		board[xx + xoff][yy + yoff] <= move_num + 2;
 		end
 	else if(back_up)
-		board[xx][yy] = 0;					//# since we are backing up we have no longer visited this square
+		board[xx][yy] <= 0;					//# since we are backing up we have no longer visited this square
 	end 
 
 
@@ -106,7 +106,7 @@ module TourLogic (clk,rst_n,x_start,y_start,go,done,indx,move);
 	else if(making_move)
 		xx <= xx + xoff;	
 	else if(back_up)
-		xx = xx - off_x(move_try);
+		xx <= xx - off_x(move_try);
 	end
 
 //yy ff
@@ -119,7 +119,7 @@ module TourLogic (clk,rst_n,x_start,y_start,go,done,indx,move);
 	else if(making_move)
 		yy <= yy + yoff;
 	else if(back_up)
-		yy = yy - off_y(move_try);
+		yy <= yy - off_y(move_try);
 	end
 
 //move_try shift register

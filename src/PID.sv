@@ -1,4 +1,4 @@
-`default_nettype none
+//`default_nettype none
 module PID (clk, rst_n, moving, err_vld, error, frwrd, lft_spd, rght_spd);
 	
 	//////////////////////////////////

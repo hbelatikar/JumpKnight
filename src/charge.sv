@@ -1,4 +1,4 @@
-`default_nettype none
+//`default_nettype none
 module charge #(
     parameter  FAST_SIM = 1) 
     ( clk, rst_n, go, piezo, piezo_n);
