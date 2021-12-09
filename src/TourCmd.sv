@@ -13,7 +13,7 @@ module TourCmd(clk,rst_n,start_tour,move,mv_indx,
   output cmd_rdy;			// cmd_rdy signal to cmd_proc
   input clr_cmd_rdy;		// from cmd_proc (goes to UART_wrapper too)
   input send_resp;			// lets us know cmd_proc is done with command
-  output [7:0] resp;		// either 0xA5 (done) or 0x5A (in progress)
+  output logic [7:0] resp;		// either 0xA5 (done) or 0x5A (in progress)
 
 	//Defining Local Params & Typedefs
 	//Logic for storing decomposed movement commands
@@ -26,7 +26,7 @@ module TourCmd(clk,rst_n,start_tour,move,mv_indx,
 				WEST  = 8'h3F;
 	
 	//Total Moves Required for completion
-	localparam LAST_MOVE_INDX = 5'd23;
+	localparam LAST_MOVE_INDX = 5'h17;	//Decimal -> 23
 
 	//One hot encoded movement command from TourLogic
 	typedef enum logic [7:0] {	N2W1 = 8'b0000_0001,
@@ -67,7 +67,19 @@ module TourCmd(clk,rst_n,start_tour,move,mv_indx,
 	//// If my knights tour has ended (24 moves are done) and 
 	//// if my usurp control was enabled at that time,
 	//// send resp as 0xA5 or else keep sending 0x5A
-	assign resp = (usurp & (mv_indx == LAST_MOVE_INDX)) ? 8'hA5 : 8'h5A;
+	always_comb begin : resp_gen
+		if(~usurp) 
+			resp = 8'hA5;
+		else begin
+			if(mv_indx == LAST_MOVE_INDX)
+				resp = 8'hA5;
+			else
+				resp = 8'h5A;
+		end
+	end
+	// assign resp = 	~usurp ?	8'hA5 :
+	// 				(mv_indx == LAST_MOVE_INDX) ? 8'hA5 :
+	// 												8'h5A;
 	
 	//Generating the Y axis and X axis command as per the move recieved from tourlogic
 	always_comb begin

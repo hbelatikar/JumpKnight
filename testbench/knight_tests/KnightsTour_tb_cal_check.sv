@@ -87,9 +87,9 @@ module KnightsTour_tb_cal_check();
             $display("Calibration is done!, waiting for response from RCOM...");
 
             @(posedge resp_rdy);
-            condition_checker (.condition(resp === 8'h5A), .true_msg("Calibration response recieved!"), .test_fail(test_fail),
+            condition_checker (.condition(resp === 8'hA5), .true_msg("Calibration response recieved!"), .test_fail(test_fail),
 								   .false_msg("Wrong Response Code for Calibration Command!"));
-            $display("resp: \t EXPECTED : 5a \t OBSERVED : %h", resp);
+            $display("resp: \t EXPECTED : a5 \t OBSERVED : %h", resp);
 
             @(posedge clk);
             @(negedge clk);
