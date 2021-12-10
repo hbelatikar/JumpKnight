@@ -8,7 +8,7 @@ module TourLogic_tb ();
     TourLogic iDUT (.clk(clk), .rst_n(rst_n), .x_start(x_start), .y_start(y_start), .go(go), .done(done), .indx(indx), .move(move));
 
     initial begin
-        
+        int mcd;
         clk = 1'b0;
         rst_n = 1'b0;
         go = 1'b0;
@@ -35,6 +35,10 @@ module TourLogic_tb ();
 			begin: done_set
 				@(posedge done);
 				$display("done is asserted \n");
+                mcd = $fopen("moves.txt","w");
+                for (int i = 0; i < 24 ; i= i+1)
+                    $fdisplay(mcd,"%b", iDUT.last_move[i]);
+                repeat(10000) @(posedge clk);
 				disable wait_for_done;
                 $stop();
 			end

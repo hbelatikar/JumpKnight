@@ -9,6 +9,7 @@ os.system("vlog -work work  ../testbench/knight_tests/*.sv")
 # os.system("vsim -c -do \"run -all\"  KnightsTour_tb_moveW1")
 # os.system("vsim -c -do \"run -all\"  KnightsTour_tb_moveE2FF")
 os.system("vsim -c -do \"run -all\"  KnightsTour_tb_tour_chk")
+# os.system("vsim -c -do \"run -all\"  KnightsTour_tb_tour_move")
 
 
 

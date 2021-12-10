@@ -106,7 +106,7 @@ module KnightsTour_tb_tour_chk();
 
     fork
         begin : move_tour_start
-            $display("Starting Test 5");
+            $display("Starting Test 5.1 - Assertion of Tour go");
             $display("Sending Command..");
             send_RCOM_command (.cmd_to_snd(16'h4022), .cmd(cmd), .snd_cmd(send_cmd), .clk(clk));
             if(~iDUT.tour_go)
@@ -124,8 +124,28 @@ module KnightsTour_tb_tour_chk();
             disable move_tour_start;
         end
     join
+
+    fork
+        begin : move_tour_calc_done
+            $display("Starting Test 5.2 - Completion of tour moves calculation");
+            if(~iDUT.start_tour)
+                @(posedge iDUT.start_tour);
+            condition_checker (.condition((iDUT.move !== 8'h00)), .true_msg("calculations done and move produced"), .test_fail(test_fail),
+                                .false_msg("calculations done but move did not produced!"));
+            $display("First move: \t OBSERVED : %b", iDUT.move);
+            
+            disable move_tour_calc_done_timeout;
+        end
+
+        begin : move_tour_calc_done_timeout
+            check_timeout(.clk(clk), .cycles_to_wait(1000000), .test_error("start_tour did not assert"));
+            test_fail = 1'b1;
+            disable move_tour_calc_done;
+        end
+    join
+
     
-    happy_msg_printer(.test_fail(test_fail), .test_name("TEST 5 - Tour_go assertion"), .test_file(output_file), .stop_test(1'b1));
+    happy_msg_printer(.test_fail(test_fail), .test_name("TEST 5 - Tour_go assertion and Move Calculations"), .test_file(output_file), .stop_test(1'b1));
 
     end
 
