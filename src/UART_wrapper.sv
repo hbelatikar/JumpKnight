@@ -21,9 +21,9 @@ module UART_wrapper (
 	
 	//Instantitate the UART
 	UART iU_UWRP	(.clk(clk),.rst_n(rst_n),.RX(RX),.TX(TX),
-				 .rx_rdy(rx_rdy),.clr_rx_rdy(clr_rx_rdy),
-				 .rx_data(rx_data),.trmt(trmt),.tx_data(resp),
-				 .tx_done(tx_done));
+				 	.rx_rdy(rx_rdy),.clr_rx_rdy(clr_rx_rdy),
+				 	.rx_data(rx_data),.trmt(trmt),.tx_data(resp),
+				 	.tx_done(tx_done));
 
 	//State enumerators
 	typedef enum logic {MSB, LSB} t_state;
@@ -46,10 +46,10 @@ module UART_wrapper (
 	begin
 		if(!rst_n)
 			cmd_rdy <= 1'b0;
-		else if (clr_cmd_rdy | rx_rdy)
-			cmd_rdy <= 1'b0;
 		else if (set_cmd_rdy)
 			cmd_rdy <= 1'b1;
+		else if (clr_cmd_rdy | rx_rdy)
+			cmd_rdy <= 1'b0;
 	end
 	
 	//State registers w.r.t clk
@@ -70,19 +70,23 @@ module UART_wrapper (
 		n_state = state;
 		
 		case(state)
-			MSB: 
+			MSB: begin
+				// clr_rx_rdy = 1'b0;
 				if(rx_rdy) begin		//If MSB receiving is done:
 					n_state = LSB;		///Go to LSB in next clock cycle
 					cmd_high_en = 1'b1;	///Set the cmd high enable
 					clr_rx_rdy = 1'b1;	///Clear the rdy flag of UART
 				end
+			end
 			
-			LSB:
+			LSB: begin
+				// clr_rx_rdy = 1'b0;
 				if (rx_rdy) begin		//If LSB receiving is done:
 					n_state = MSB;		///Go back to MSB
 					set_cmd_rdy = 1'b1;	///Inficate that command is ready
 					clr_rx_rdy = 1'b1;	///Clear the ready sig of UART again
 				end
+			end
 		endcase
 	end
 endmodule

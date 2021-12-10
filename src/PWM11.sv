@@ -15,7 +15,7 @@ module PWM11 (
 	always_ff @(posedge clk, negedge rst_n)
 	begin
 		if(!rst_n) 
-			cnt = 11'h0;
+			cnt <= 11'h0;
 		else
 			cnt <= cnt + 1'b1;
 	end
