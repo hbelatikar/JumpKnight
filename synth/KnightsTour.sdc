@@ -1,6 +1,6 @@
 ###################################################################
 
-# Created by write_sdc on Wed Dec  8 20:26:04 2021
+# Created by write_sdc on Fri Dec 10 09:18:02 2021
 
 ###################################################################
 set sdc_version 2.1
@@ -32,7 +32,7 @@ set_load -pin_load 0.1 [get_ports piezo]
 set_load -pin_load 0.1 [get_ports piezo_n]
 set_load -pin_load 0.1 [get_ports IR_en]
 create_clock [get_ports clk]  -period 3  -waveform {0 1}
-set_clock_uncertainty 0.2  [get_clocks clk]
+set_clock_uncertainty 0.15  [get_clocks clk]
 set_input_delay -clock clk  0.4  [get_ports RST_n]
 set_input_delay -clock clk  0.4  [get_ports MISO]
 set_input_delay -clock clk  0.4  [get_ports INT]

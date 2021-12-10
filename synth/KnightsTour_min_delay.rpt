@@ -6,15 +6,15 @@ Report : timing
         -max_paths 1
 Design : KnightsTour
 Version: S-2021.06
-Date   : Wed Dec  8 20:26:36 2021
+Date   : Fri Dec 10 09:18:02 2021
 ****************************************
 
 Operating Conditions: tt0p85v25c   Library: saed32lvt_tt0p85v25c
 Wire Load Model Mode: enclosed
 
-  Startpoint: iIR/smpl_tmr_reg[0]
+  Startpoint: iWRAP/iU_UWRP/iRX/rx_shift_reg_reg[3]
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: iIR/smpl_tmr_reg[0]
+  Endpoint: iWRAP/cmd_data_high_reg[3]
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: min
@@ -27,22 +27,25 @@ Wire Load Model Mode: enclosed
   --------------------------------------------------------------------------
   clock clk (rise edge)                                   0.00       0.00
   clock network delay (ideal)                             0.00       0.00
-  iIR/smpl_tmr_reg[0]/CLK (DFFARX1_LVT)                   0.00       0.00 r
-  iIR/smpl_tmr_reg[0]/QN (DFFARX1_LVT)                    0.05       0.05 f
-  iIR/smpl_tmr_reg[0]/D (DFFARX1_LVT)                     0.01       0.06 f
-  data arrival time                                                  0.06
+  iWRAP/iU_UWRP/iRX/rx_shift_reg_reg[3]/CLK (DFFASX1_LVT)
+                                                          0.00       0.00 r
+  iWRAP/iU_UWRP/iRX/rx_shift_reg_reg[3]/Q (DFFASX1_LVT)
+                                                          0.09       0.09 f
+  U946/Y (AO22X1_LVT)                                     0.04       0.13 f
+  iWRAP/cmd_data_high_reg[3]/D (DFFARX1_LVT)              0.01       0.14 f
+  data arrival time                                                  0.14
 
   clock clk (rise edge)                                   0.00       0.00
   clock network delay (ideal)                             0.00       0.00
-  clock uncertainty                                       0.20       0.20
-  iIR/smpl_tmr_reg[0]/CLK (DFFARX1_LVT)                   0.00       0.20 r
-  library hold time                                      -0.01       0.19
-  data required time                                                 0.19
+  clock uncertainty                                       0.15       0.15
+  iWRAP/cmd_data_high_reg[3]/CLK (DFFARX1_LVT)            0.00       0.15 r
+  library hold time                                      -0.01       0.14
+  data required time                                                 0.14
   --------------------------------------------------------------------------
-  data required time                                                 0.19
-  data arrival time                                                 -0.06
+  data required time                                                 0.14
+  data arrival time                                                 -0.14
   --------------------------------------------------------------------------
-  slack (VIOLATED)                                                  -0.12
+  slack (MET)                                                        0.00
 
 
 1
