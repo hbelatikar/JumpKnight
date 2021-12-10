@@ -36,15 +36,16 @@ set_load 0.1 [all_outputs]
 set_max_transition 0.15 [current_design]
 set_wire_load_model -name 16000 -library saed32lvt_tt0p85v25c
 
-###################################################
-##### Set clk uncertainity to tackle clk skew #####
-###################################################
-set_clock_uncertainty 0.20 clk
-
 ###############################
 ##### Compile the design  #####
 ###############################
 compile -map_effort medium
+
+###################################################
+##### Set clk uncertainity to tackle clk skew #####
+###################################################
+set_clock_uncertainty 0.20 clk
+set_fix_hold clk
 
 ################################
 ##### Unflatten Hierarchy  #####
@@ -54,7 +55,7 @@ ungroup -all -flatten
 #####################################
 ##### Compile the design again  #####
 #####################################
-compile -map_effort high
+compile -map_effort medium
 
 ##########################################
 ##### Generate Timing & Are Reports  #####
