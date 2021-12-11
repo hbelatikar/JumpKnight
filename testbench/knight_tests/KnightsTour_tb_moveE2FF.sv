@@ -187,14 +187,15 @@ module KnightsTour_tb_moveE2FF();
 
     fork
         begin : charge_chk
-            condition_checker (.condition((iDUT.iCHRG.state === G6_note)), .true_msg("Reached first note"),
+            condition_checker (.condition((iDUT.ICHRG.state === G6_note)), .true_msg("Reached first note"),
                                 .false_msg("did not reach first note!"), .test_fail(test_fail));
-            $display("error: \t EXPECTED : 1 (IDLE) \t OBSERVED : %h", iDUT.iCHRG.state);
-            repeat(35000) @(posedge clk);
+            $display("error: \t EXPECTED : 1 (G6_note) \t OBSERVED : %h", iDUT.ICHRG.state);
+            // repeat(35000) @(posedge clk);
+            @(posedge iDUT.ICHRG.clk_cntr_clr);
 
-            condition_checker (.condition((iDUT.iCHRG.state === C7_note)), .true_msg("Reached second note"),
+            condition_checker (.condition((iDUT.ICHRG.state === C7_note)), .true_msg("Reached second note"),
                                 .false_msg("did not reach next note!"), .test_fail(test_fail));
-            $display("error: \t EXPECTED : 2 (IDLE) \t OBSERVED : %h", iDUT.iCHRG.state);
+            $display("error: \t EXPECTED : 2 (C7_note) \t OBSERVED : %h", iDUT.ICHRG.state);
             
             disable charge_chk_timeout;
         end
