@@ -187,9 +187,20 @@ module KnightsTour_tb_tour_move();
             if(!iDUT.fanfare_go)
                 @(posedge iDUT.fanfare_go);
             $display("X Move completed with fanfare!");
+            $display("Send_resp  EXPECTED : 0  \t OBSERVED : %h", iDUT.iTC.send_resp);
+            $display("Mv_ind     EXPECTED : 0  \t OBSERVED : %h", iDUT.iTC.mv_indx);
+            $display("inc_mv     EXPECTED : 0  \t OBSERVED : %h", iDUT.iTC.inc_mv);
+
+            @(posedge clk);
+            $display("After a cycle");
             $display("Send_resp  EXPECTED : 1  \t OBSERVED : %h", iDUT.iTC.send_resp);
             $display("Mv_ind     EXPECTED : 1  \t OBSERVED : %h", iDUT.iTC.mv_indx);
             $display("inc_mv     EXPECTED : 1  \t OBSERVED : %h", iDUT.iTC.inc_mv);
+            @(posedge clk);
+            $display("After a cycle");
+            $display("Send_resp  EXPECTED : 0  \t OBSERVED : %h", iDUT.iTC.send_resp);
+            $display("Mv_ind     EXPECTED : 1  \t OBSERVED : %h", iDUT.iTC.mv_indx);
+            $display("inc_mv     EXPECTED : 0  \t OBSERVED : %h", iDUT.iTC.inc_mv);
             
             disable robot_moves_check_timeout;
         end

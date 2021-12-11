@@ -120,35 +120,35 @@ module KnightsTour_tb_moveW1();
             
             condition_checker (.condition((iDUT.iCMD.frwrd === 10'h000)), .true_msg("frwrd reg initialized to zero"), .test_fail(test_fail),
                                 .false_msg("frwrd reg not getting initialized to zero when move command is sent!"));
-            $display("resp: \t EXPECTED : 000 \t OBSERVED : %h", iDUT.iCMD.frwrd);
+            $display("frwrd: \t EXPECTED : 000 \t OBSERVED : %h", iDUT.iCMD.frwrd);
             
             repeat(10) @(posedge clk);
             
             error_val_to_compare = iDUT.error;
             condition_checker (.condition((iDUT.error !== 10'h000)), .true_msg("Error value updated"),
                                 .false_msg("Error value did not update!"), .test_fail(test_fail));
-            $display("resp: \t EXPECTED : ~000 \t OBSERVED : %h", iDUT.error);
+            $display("error_val: \t EXPECTED : ~000 \t OBSERVED : %h", iDUT.error);
 
             condition_checker (.condition(iDUT.iCMD.moving), .true_msg("moving signal is asserted succesfully"),
                                 .false_msg("moving signal is not asserted!"), .test_fail(test_fail));
-            $display("resp: \t EXPECTED : 1 \t OBSERVED : %h", iDUT.iCMD.moving);
+            $display("moving: \t EXPECTED : 1 \t OBSERVED : %h", iDUT.iCMD.moving);
             
             condition_checker (.condition($signed(iDUT.lft_spd) < $signed(iDUT.rght_spd) ), .true_msg("right speed greater than left speed!"),
                                 .false_msg("right speed not greater than left speed!!"), .test_fail(test_fail));
-            $display("resp: \t EXPECTED : lft<rght \t OBSERVED : lft_spd: %d \t rght_spd: %d", iDUT.lft_spd, iDUT.rght_spd);
+            $display("speed: \t EXPECTED : lft<rght \t OBSERVED : lft_spd: %d \t rght_spd: %d", iDUT.lft_spd, iDUT.rght_spd);
             
             repeat(700000) @(posedge clk);
             condition_checker (.condition(($signed(iDUT.error) < $signed(error_val_to_compare)) | ($signed(iDUT.error) > $signed(error_val_to_compare)) ), 
                                 .true_msg("Bot is turning properly!"),
                                 .false_msg("bot isn't turning correctly!!"), .test_fail(test_fail));
-            $display("error: \t EXPECTED_ABSOLUTE : %d < %d", iDUT.error, error_val_to_compare);
+            $display("error_val: \t EXPECTED_ABSOLUTE : %d < %d", iDUT.error, error_val_to_compare);
             
             $display("Waiting for signal to start moving forward");
             @(posedge iDUT.iCMD.inc_frwrd);
             repeat(100) @(posedge clk);
             condition_checker (.condition((iDUT.iCMD.frwrd > 10'h000)), .true_msg("Bot is moving forward!"),
                                 .false_msg("bot isn't moving forward!!"), .test_fail(test_fail));
-            $display("error: \t EXPECTED : %d > 0", iDUT.iCMD.frwrd);
+            $display("frwrd: \t EXPECTED : %d > 0", iDUT.iCMD.frwrd);
 
             $display("Waiting for the first center strip");
             @(posedge iDUT.cntrIR);
@@ -157,12 +157,12 @@ module KnightsTour_tb_moveW1();
             $display("Second center strip edge detected");
             condition_checker (.condition((iDUT.iCMD.frwrd === 10'h300)), .true_msg("Bot at Max speed"),
                                 .false_msg("bot did not reach max speed yet!"), .test_fail(test_fail));
-            $display("error: \t EXPECTED : 0x300 \t OBSERVED : %h", iDUT.iCMD.frwrd);
+            $display("frwrd: \t EXPECTED : 0x300 \t OBSERVED : %h", iDUT.iCMD.frwrd);
 
             repeat(3000) @(posedge clk);
             condition_checker (.condition((iDUT.iCMD.frwrd < 10'h300)), .true_msg("Bot speed decreasing"),
                                 .false_msg("bot speed not decreasing!"), .test_fail(test_fail));
-            $display("error: \t EXPECTED : 0x300 \t OBSERVED : %h", iDUT.iCMD.frwrd);
+            $display("frwrd: \t EXPECTED : 0x300 \t OBSERVED : %h", iDUT.iCMD.frwrd);
             
             // @(posedge fanfare_go);
             // $display("Fanfare go succesfully asserted!");
