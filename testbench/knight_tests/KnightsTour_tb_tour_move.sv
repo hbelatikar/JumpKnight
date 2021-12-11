@@ -106,7 +106,7 @@ module KnightsTour_tb_tour_move();
 
     fork
         begin : move_tour_start
-            $display("Starting Test 5.1 - Assertion of Tour go");
+            $display("Starting Test 6.1 - Assertion of Tour go");
             $display("Sending Command..");
             send_RCOM_command (.cmd_to_snd(16'h4022), .cmd(cmd), .snd_cmd(send_cmd), .clk(clk));
             if(~iDUT.tour_go)
@@ -127,7 +127,7 @@ module KnightsTour_tb_tour_move();
 
     fork
         begin : move_tour_calc_done
-            $display("Starting Test 5.2 - Completion of tour moves calculation");
+            $display("Starting Test 6.2 - Completion of tour moves calculation");
             if(~iDUT.start_tour)
                 @(posedge iDUT.start_tour);
             condition_checker (.condition((iDUT.move !== 8'h00)), .true_msg("calculations done and move produced"), .test_fail(test_fail),
@@ -147,7 +147,8 @@ module KnightsTour_tb_tour_move();
     fork
         begin : robot_moves_check
             $display("Starting 6.3 - Robot moves Check");
-
+            
+            @(posedge clk);
             $display("Is usurp asserted?"); 
             condition_checker (.condition((iDUT.iTC.usurp)), .true_msg("Usurp succesfully asserted"), .test_fail(test_fail),
                                 .false_msg("Usurp not asserted!"));
@@ -169,7 +170,7 @@ module KnightsTour_tb_tour_move();
             @(posedge iDUT.iTC.send_resp);
             $display("Move completed!");
 
-            @(posedge clk);
+            repeat(10) @(posedge clk);
             
             $display("Is horizontal command asserted?");
             condition_checker (.condition((iDUT.iTC.mv_vert_or_horiz)), .true_msg("horizontal selector asserted"), .test_fail(test_fail),
@@ -187,14 +188,14 @@ module KnightsTour_tb_tour_move();
         end
 
         begin : robot_moves_check_timeout
-            check_timeout(.clk(clk), .cycles_to_wait(1000000), .test_error("robot did not start moving"));
+            check_timeout(.clk(clk), .cycles_to_wait(10000000), .test_error("robot did not start moving"));
             test_fail = 1'b1;
             disable robot_moves_check;
         end
     join
 
     
-    happy_msg_printer(.test_fail(test_fail), .test_name("TEST 5 - Tour_go assertion and Move Calculations"), .test_file(output_file), .stop_test(1'b1));
+    happy_msg_printer(.test_fail(test_fail), .test_name("TEST 6 - Actual Tour Movement"), .test_file(output_file), .stop_test(1'b1));
 
     end
 
