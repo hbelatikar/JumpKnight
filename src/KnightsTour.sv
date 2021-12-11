@@ -110,7 +110,7 @@ module KnightsTour(
   /////////////////////////////////////////
   // Instantiate "Charge!" fanfare unit //
   ///////////////////////////////////////
-  charge #(FAST_SIM) ICHRG(.clk(clk),.rst_n(rst_n),.go(fanfare_go),.piezo(piezo),.piezo_n(piezo_n));
+  charge #(FAST_SIM) iCHRG(.clk(clk),.rst_n(rst_n),.go(fanfare_go),.piezo(piezo),.piezo_n(piezo_n));
   
 	  
 endmodule

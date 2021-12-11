@@ -50,6 +50,7 @@ module KnightsTour_tb_moveE2FF();
                         .rghtPWM1(rghtPWM1),.rghtPWM2(rghtPWM2),.IR_en(IR_en),
                         .lftIR_n(lftIR_n),.rghtIR_n(rghtIR_n),.cntrIR_n(cntrIR_n)); 
 
+    localparam logic [2:0] IDLE = 0, G6_note = 1, C7_note = 2, E7_note_1 = 3 , G7_note_1 = 4, E7_note_2 = 5, G7_note_2 = 6;
 
     initial begin
         // opening the file
@@ -105,7 +106,7 @@ module KnightsTour_tb_moveE2FF();
     join
 
     fork
-        begin : move_W1
+        begin : move_E2FF
             $display("Starting Test 4");
             $display("Sending Command..");
             send_RCOM_command (.cmd_to_snd(16'h3BF2), .cmd(cmd), .snd_cmd(send_cmd), .clk(clk));
@@ -174,17 +175,34 @@ module KnightsTour_tb_moveE2FF();
                 @(posedge piezo);
             $display("Fan Fare playing succesfully!");
 
-            // @(posedge resp_rdy);
-            // condition_checker (.condition((iDUT.iCMD.frwrd == 10'h000)), .true_msg("Bot has completed move"),
-            //                     .false_msg("Bot has not completed his move!"), .test_fail(test_fail));
-            
-            disable move_W1_timeout;
+            disable move_E2FF_timeout;
         end
 
-        begin : move_W1_timeout
-            check_timeout(.clk(clk), .cycles_to_wait(10000000), .test_error("move west 1 square did not complete"));
+        begin : move_E2FF_timeout
+            check_timeout(.clk(clk), .cycles_to_wait(10000000), .test_error("move east 2 square with fanfare did not complete"));
             test_fail = 1'b1;
-            disable move_W1;
+            disable move_E2FF;
+        end
+    join
+
+    fork
+        begin : charge_chk
+            condition_checker (.condition((iDUT.iCHRG.state === G6_note)), .true_msg("Reached first note"),
+                                .false_msg("did not reach first note!"), .test_fail(test_fail));
+            $display("error: \t EXPECTED : 1 (IDLE) \t OBSERVED : %h", iDUT.iCHRG.state);
+            repeat(35000) @(posedge clk);
+
+            condition_checker (.condition((iDUT.iCHRG.state === C7_note)), .true_msg("Reached second note"),
+                                .false_msg("did not reach next note!"), .test_fail(test_fail));
+            $display("error: \t EXPECTED : 2 (IDLE) \t OBSERVED : %h", iDUT.iCHRG.state);
+            
+            disable charge_chk_timeout;
+        end
+
+        begin : charge_chk_timeout
+            check_timeout(.clk(clk), .cycles_to_wait(3650000), .test_error("Charge should have finished by now."));
+            test_fail = 1'b1;
+            disable charge_chk;
         end
     join
     

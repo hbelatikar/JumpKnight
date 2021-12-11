@@ -14,6 +14,7 @@ if platform == "linux" or platform == "linux2":
     os.system("vsim -c -coverage -do \"run -all; coverage save -assert -directive -cvg -codeAll KnightsTour_tb_moveE2FF.ucdb; exit\"       KnightsTour_tb_moveE2FF")
     os.system("vsim -c -coverage -do \"run -all; coverage save -assert -directive -cvg -codeAll KnightsTour_tb_tour_chk.ucdb; exit\"       KnightsTour_tb_tour_chk")
     os.system("vsim -c -coverage -do \"run -all; coverage save -assert -directive -cvg -codeAll KnightsTour_tb_tour_move.ucdb; exit\"      KnightsTour_tb_tour_move")
+    # os.system("vsim -coverage -do \"run -all\"      KnightsTour_tb_tour_move")
 
 elif platform == "win32":
     # Windows...
@@ -27,7 +28,9 @@ elif platform == "win32":
     os.system("vsim -c -do \"run -all; exit\"  KnightsTour_tb_moveW1")
     os.system("vsim -c -do \"run -all; exit\"  KnightsTour_tb_moveE2FF")
     os.system("vsim -c -do \"run -all; exit\"  KnightsTour_tb_tour_chk")
-    os.system("vsim -c -do \"run -all; exit\"  KnightsTour_tb_tour_move")
+    # os.system("vsim -c -do \"run -all; exit\"  KnightsTour_tb_tour_move")
+
+    os.system("vsim -L altera_mf_ver -L lpm_ver KnightsTour_tb_moveE2FF")
 
 else:
     print("Couldn't find an operating system matching the specification.")
@@ -35,7 +38,6 @@ else:
 
 
 ############### JUNK ########################
-# os.system("vsim -L altera_mf_ver -L lpm_ver KnightsTour_tb_tour_chk")
 #  -do \"waves.do\"
 
 # coverage save -assert -directive -cvg -codeAll KnightsTour_tb_moveW1.ucdb
