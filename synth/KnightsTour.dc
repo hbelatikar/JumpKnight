@@ -44,7 +44,7 @@ compile -map_effort medium
 ###################################################
 ##### Set clk uncertainity to tackle clk skew #####
 ###################################################
-set_clock_uncertainty 0.20 clk
+set_clock_uncertainty 0.15 clk
 set_fix_hold clk
 
 ################################
