@@ -70,8 +70,8 @@ module KnightsTour_tb_PWM_NEMO_check();
             $display("Motor 2 \t rghtPWM1 Value: %d \t rghtPWM2 Value: %d", iDUT.iMTR.rghtPWM1, iDUT.iMTR.rghtPWM2);
             $display("Motor 1 \t Duty Value: %d \t Motor 2 \t Duty Value: %d", iDUT.iMTR.Lduty, iDUT.iMTR.Rduty);
             
-            if(     (~iDUT.iMTR.lftPWM1 & iDUT.iMTR.lftPWM2) & 
-                    (~iDUT.iMTR.rghtPWM1 & iDUT.iMTR.rghtPWM2) &
+            if(     (iDUT.iMTR.lftPWM1 &  ~iDUT.iMTR.lftPWM2) & 
+                    (iDUT.iMTR.rghtPWM1 & ~iDUT.iMTR.rghtPWM2) &
                     ( iDUT.iMTR.Lduty === 11'h400) &
                     ( iDUT.iMTR.Rduty === 11'h400)) begin
                 $display("PWM Values are correct!");
