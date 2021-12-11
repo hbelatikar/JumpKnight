@@ -148,7 +148,7 @@ module KnightsTour_tb_tour_move();
         begin : robot_moves_check
             $display("Starting 6.3 - Robot moves Check");
             
-            @(posedge clk);
+            repeat(10) @(posedge clk);
             $display("Is usurp asserted?"); 
             condition_checker (.condition((iDUT.iTC.usurp)), .true_msg("Usurp succesfully asserted"), .test_fail(test_fail),
                                 .false_msg("Usurp not asserted!"));
@@ -183,6 +183,13 @@ module KnightsTour_tb_tour_move();
             $display("Is the robot actually moving?");
             condition_checker (.condition(iDUT.iCMD.moving), .true_msg("Moving signal asserted"), .test_fail(test_fail),
                                 .false_msg("Moving signal not asserted"));
+            
+            if(!iDUT.fanfare_go)
+                @(posedge iDUT.fanfare_go);
+            $display("X Move completed with fanfare!");
+            $display("Send_resp  EXPECTED : 1  \t OBSERVED : %h", iDUT.iTC.send_resp);
+            $display("Mv_ind     EXPECTED : 1  \t OBSERVED : %h", iDUT.iTC.mv_indx);
+            $display("inc_mv     EXPECTED : 1  \t OBSERVED : %h", iDUT.iTC.inc_mv);
             
             disable robot_moves_check_timeout;
         end
