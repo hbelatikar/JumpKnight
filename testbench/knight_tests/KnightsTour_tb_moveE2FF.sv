@@ -190,12 +190,36 @@ module KnightsTour_tb_moveE2FF();
             condition_checker (.condition((iDUT.ICHRG.state === G6_note)), .true_msg("Reached first note"),
                                 .false_msg("did not reach first note!"), .test_fail(test_fail));
             $display("error: \t EXPECTED : 1 (G6_note) \t OBSERVED : %h", iDUT.ICHRG.state);
-            // repeat(35000) @(posedge clk);
+            
             @(posedge iDUT.ICHRG.clk_cntr_clr);
-
+            repeat(10) @(posedge clk);
             condition_checker (.condition((iDUT.ICHRG.state === C7_note)), .true_msg("Reached second note"),
                                 .false_msg("did not reach next note!"), .test_fail(test_fail));
             $display("error: \t EXPECTED : 2 (C7_note) \t OBSERVED : %h", iDUT.ICHRG.state);
+
+            @(posedge iDUT.ICHRG.clk_cntr_clr);
+            repeat(10) @(posedge clk);
+            condition_checker (.condition((iDUT.ICHRG.state === E7_note_1)), .true_msg("Reached third note"),
+                                .false_msg("did not reach next note!"), .test_fail(test_fail));
+            $display("error: \t EXPECTED : 2 (E7_note_1) \t OBSERVED : %h", iDUT.ICHRG.state);
+            
+            @(posedge iDUT.ICHRG.clk_cntr_clr);
+            repeat(10) @(posedge clk);
+            condition_checker (.condition((iDUT.ICHRG.state === G7_note_1)), .true_msg("Reached fourth note"),
+                                .false_msg("did not reach next note!"), .test_fail(test_fail));
+            $display("error: \t EXPECTED : 2 (G7_note_1) \t OBSERVED : %h", iDUT.ICHRG.state);
+            
+            @(posedge iDUT.ICHRG.clk_cntr_clr);
+            repeat(10) @(posedge clk);
+            condition_checker (.condition((iDUT.ICHRG.state === E7_note_2)), .true_msg("Reached fifth note"),
+                                .false_msg("did not reach next note!"), .test_fail(test_fail));
+            $display("error: \t EXPECTED : 2 (E7_note_2) \t OBSERVED : %h", iDUT.ICHRG.state);
+            
+            @(posedge iDUT.ICHRG.clk_cntr_clr);
+            repeat(10) @(posedge clk);
+            condition_checker (.condition((iDUT.ICHRG.state === G7_note_2)), .true_msg("Reached final note"),
+                                .false_msg("did not reach next note!"), .test_fail(test_fail));
+            $display("error: \t EXPECTED : 2 (G7_note_2) \t OBSERVED : %h", iDUT.ICHRG.state);
             
             disable charge_chk_timeout;
         end
