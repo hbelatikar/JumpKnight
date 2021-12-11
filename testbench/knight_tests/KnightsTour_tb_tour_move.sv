@@ -1,4 +1,4 @@
-module KnightsTour_tb_tour_chk();
+module KnightsTour_tb_tour_move();
 
     // << import or include tasks?>>
     import test_package::*;
