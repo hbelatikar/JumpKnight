@@ -57,7 +57,7 @@ package test_package;
         end
         if(stop_test) begin
             $fclose(test_file);
-            $finish();
+            $stop();
         end
     endtask //automatic
 
