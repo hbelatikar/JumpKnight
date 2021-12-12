@@ -11,18 +11,22 @@ if platform == "linux" or platform == "linux2":
     os.system("mkdir ucdb")   
 
     # Compile the design and testbench files
-    os.system("vlog -cover bcst -work work  ../src/*.sv")
+    os.system("vlog -cover bcst -work work  ../synth/*.vg")
+    os.system("vlog -cover bcst -work work  ../src/RemoteComm.sv ../src/KnightPhysics.sv ../src/UAR*.sv ../src/SPI_iNEMO4.sv")
     os.system("vlog -cover bcst -work work  ../testbench/test_package.sv")
-    os.system("vlog -cover bcst -work work  ../testbench/*.sv")
-    os.system("vlog -cover bcst -work work  ../testbench/knight_tests/*.sv")
+    os.system("vlog -cover bcst -work work  ../testbench/knight_tests_postsynth/*.sv")
 
+    os.system("vsim -c -do \"run -all -t ns +notimingchecks -L /filespace/b/belatikar/ECE551/project/JumpKnight/SAED32_lib\" KnightsTour_tb_cal_check")
+    
+    # vsim -c -do "run -all -t ns +notimingchecks -L /filespace/b/belatikar/ECE551/project/JumpKnight/SAED32_lib\" KnightsTour_tb_cal_check
+    
     # Run the tests with coverage and dump coverage into their respective .ucdb file
-    os.system("vsim -c -coverage -do \"run -all; coverage save -assert -directive -cvg -codeAll ./ucdb/T1.ucdb; exit\" KnightsTour_tb_PWM_NEMO_check")
-    os.system("vsim -c -coverage -do \"run -all; coverage save -assert -directive -cvg -codeAll ./ucdb/T2.ucdb; exit\" KnightsTour_tb_cal_check")
-    os.system("vsim -c -coverage -do \"run -all; coverage save -assert -directive -cvg -codeAll ./ucdb/T3.ucdb; exit\" KnightsTour_tb_moveW1")
-    os.system("vsim -c -coverage -do \"run -all; coverage save -assert -directive -cvg -codeAll ./ucdb/T4.ucdb; exit\" KnightsTour_tb_moveE2FF")
-    os.system("vsim -c -coverage -do \"run -all; coverage save -assert -directive -cvg -codeAll ./ucdb/T5.ucdb; exit\" KnightsTour_tb_tour_chk")
-    os.system("vsim -c -coverage -do \"run -all; coverage save -assert -directive -cvg -codeAll ./ucdb/T6.ucdb; exit\" KnightsTour_tb_tour_move")
+    # os.system("vsim -c -coverage -do \"run -all; coverage save -assert -directive -cvg -codeAll ./ucdb/T1.ucdb; exit\" KnightsTour_tb_PWM_NEMO_check")
+    # os.system("vsim -c -coverage -do \"run -all; coverage save -assert -directive -cvg -codeAll ./ucdb/T2.ucdb; exit\" KnightsTour_tb_cal_check")
+    # os.system("vsim -c -coverage -do \"run -all; coverage save -assert -directive -cvg -codeAll ./ucdb/T3.ucdb; exit\" KnightsTour_tb_moveW1")
+    # os.system("vsim -c -coverage -do \"run -all; coverage save -assert -directive -cvg -codeAll ./ucdb/T4.ucdb; exit\" KnightsTour_tb_moveE2FF")
+    # os.system("vsim -c -coverage -do \"run -all; coverage save -assert -directive -cvg -codeAll ./ucdb/T5.ucdb; exit\" KnightsTour_tb_tour_chk")
+    # os.system("vsim -c -coverage -do \"run -all; coverage save -assert -directive -cvg -codeAll ./ucdb/T6.ucdb; exit\" KnightsTour_tb_tour_move")
     
     # Merge all the ucdb files and generate html and txt reports from them
     os.system("vsim -c -coverage -do \"vcover merge ./ucdb/suite.ucdb ./ucdb/T1.ucdb ./ucdb/T2.ucdb ./ucdb/T3.ucdb ./ucdb/T4.ucdb ./ucdb/T5.ucdb ./ucdb/T6.ucdb; exit\"")
