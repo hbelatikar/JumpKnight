@@ -73,3 +73,8 @@ report_area > KnightsTour_area.txt
 ##########################################
 write -format verilog KnightsTour -output KnightsTour.vg
 write_sdc KnightsTour.sdc
+
+##########################################
+### Exit from Synopsys Design Compiler ###
+##########################################
+quit
