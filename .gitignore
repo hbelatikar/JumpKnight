@@ -2,4 +2,5 @@
 *.wlf
 output_file.txt
 **/rtl_work/
+**/work/
 transcript

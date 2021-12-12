@@ -5,7 +5,10 @@ if platform == "linux" or platform == "linux2":
     # Linux...
 
     # Remove compiled files from earlier runs if any
-    os.system("rm -rf output_file.txt transcript vsim.wlf work/ *.ucdb cover_report/")
+    os.system("rm -rf *.txt *.ucdb transcript vsim.wlf work/ ucdb/ cover_report/")
+    
+    # Make ucdb directory to store all coverage reports
+    os.system("mkdir ucdb")   
 
     # Compile the design and testbench files
     os.system("vlog -cover bcst -work work  ../src/*.sv")
@@ -14,17 +17,17 @@ if platform == "linux" or platform == "linux2":
     os.system("vlog -cover bcst -work work  ../testbench/knight_tests/*.sv")
 
     # Run the tests with coverage and dump coverage into their respective .ucdb file
-    os.system("vsim -c -coverage -do \"run -all; coverage save -assert -directive -cvg -codeAll T1.ucdb; exit\" KnightsTour_tb_PWM_NEMO_check")
-    os.system("vsim -c -coverage -do \"run -all; coverage save -assert -directive -cvg -codeAll T2.ucdb; exit\" KnightsTour_tb_cal_check")
-    os.system("vsim -c -coverage -do \"run -all; coverage save -assert -directive -cvg -codeAll T3.ucdb; exit\" KnightsTour_tb_moveW1")
-    os.system("vsim -c -coverage -do \"run -all; coverage save -assert -directive -cvg -codeAll T4.ucdb; exit\" KnightsTour_tb_moveE2FF")
-    os.system("vsim -c -coverage -do \"run -all; coverage save -assert -directive -cvg -codeAll T5.ucdb; exit\" KnightsTour_tb_tour_chk")
-    os.system("vsim -c -coverage -do \"run -all; coverage save -assert -directive -cvg -codeAll T6.ucdb; exit\" KnightsTour_tb_tour_move")
+    os.system("vsim -c -coverage -do \"run -all; coverage save -assert -directive -cvg -codeAll ./ucdb/T1.ucdb; exit\" KnightsTour_tb_PWM_NEMO_check")
+    os.system("vsim -c -coverage -do \"run -all; coverage save -assert -directive -cvg -codeAll ./ucdb/T2.ucdb; exit\" KnightsTour_tb_cal_check")
+    os.system("vsim -c -coverage -do \"run -all; coverage save -assert -directive -cvg -codeAll ./ucdb/T3.ucdb; exit\" KnightsTour_tb_moveW1")
+    os.system("vsim -c -coverage -do \"run -all; coverage save -assert -directive -cvg -codeAll ./ucdb/T4.ucdb; exit\" KnightsTour_tb_moveE2FF")
+    os.system("vsim -c -coverage -do \"run -all; coverage save -assert -directive -cvg -codeAll ./ucdb/T5.ucdb; exit\" KnightsTour_tb_tour_chk")
+    os.system("vsim -c -coverage -do \"run -all; coverage save -assert -directive -cvg -codeAll ./ucdb/T6.ucdb; exit\" KnightsTour_tb_tour_move")
     
     # Merge all the ucdb files and generate html and txt reports from them
-    os.system("vsim -c -coverage -do \"vcover merge suite.ucdb T1.ucdb T2.ucdb T3.ucdb T4.ucdb T5.ucdb T6.ucdb; exit\"")
-    os.system("vsim -c -coverage -do \"vcover report -html -output suite_report -verbose -threshL 50 -threshH 90 suite.ucdb; exit\"")
-    os.system("vsim -c -coverage -do \"vcover report -file suite_report.txt -verbose suite.ucdb; exit\"")
+    os.system("vsim -c -coverage -do \"vcover merge ./ucdb/suite.ucdb ./ucdb/T1.ucdb ./ucdb/T2.ucdb ./ucdb/T3.ucdb ./ucdb/T4.ucdb ./ucdb/T5.ucdb ./ucdb/T6.ucdb; exit\"")
+    os.system("vsim -c -coverage -do \"vcover report -html -output suite_report -verbose -threshL 50 -threshH 90 ./ucdb/suite.ucdb; exit\"")
+    os.system("vsim -c -coverage -do \"vcover report -output suite_report.txt -verbose ./ucdb/suite.ucdb; exit\"")
 
 elif platform == "win32":
     # Windows...
