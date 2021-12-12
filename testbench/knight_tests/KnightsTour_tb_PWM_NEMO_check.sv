@@ -1,3 +1,4 @@
+`timescale 1ns/1ps
 module KnightsTour_tb_PWM_NEMO_check();
 
     // << import or include tasks?>>
