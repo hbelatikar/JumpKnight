@@ -1,5 +1,5 @@
 `timescale 1ns/1ps
-module KnightsTour_tb_PWM_NEMO_check();
+module KnightsTour_tb_PWM_NEMO_check_postsynth();
 
     // << import or include tasks?>>
     import test_package::*;
