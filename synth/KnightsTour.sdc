@@ -1,6 +1,6 @@
 ###################################################################
 
-# Created by write_sdc on Fri Dec 10 09:39:41 2021
+# Created by write_sdc on Sun Dec 12 00:53:02 2021
 
 ###################################################################
 set sdc_version 2.1
@@ -8,6 +8,8 @@ set sdc_version 2.1
 set_units -time ns -resistance MOhm -capacitance fF -voltage V -current uA
 set_wire_load_model -name 16000 -library saed32lvt_tt0p85v25c
 set_max_transition 0.15 [current_design]
+set_driving_cell -lib_cell NAND2X2_LVT -library saed32lvt_tt0p85v25c           \
+[get_ports RST_n]
 set_driving_cell -lib_cell NAND2X2_LVT -library saed32lvt_tt0p85v25c           \
 [get_ports MISO]
 set_driving_cell -lib_cell NAND2X2_LVT -library saed32lvt_tt0p85v25c           \
@@ -31,7 +33,7 @@ set_load -pin_load 0.1 [get_ports TX]
 set_load -pin_load 0.1 [get_ports piezo]
 set_load -pin_load 0.1 [get_ports piezo_n]
 set_load -pin_load 0.1 [get_ports IR_en]
-create_clock [get_ports clk]  -period 3  -waveform {0 1}
+create_clock [get_ports clk]  -period 3  -waveform {0 1.5}
 set_clock_uncertainty 0.15  [get_clocks clk]
 set_input_delay -clock clk  0.4  [get_ports RST_n]
 set_input_delay -clock clk  0.4  [get_ports MISO]

@@ -4,3 +4,7 @@ output_file.txt
 **/rtl_work/
 **/work/
 transcript
+*.pvl
+*.syn
+*.mr
+*.svf
