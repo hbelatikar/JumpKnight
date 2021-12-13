@@ -966,7 +966,7 @@ Toggle Coverage      =       1.03% (2 of 194 bins)
 Branch Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Branches                        72        20        52    27.77%
+    Branches                        71        19        52    26.76%
 
 ================================Branch Details================================
 
@@ -976,146 +976,145 @@ Branch Coverage for instance /KnightsTour_tb_PWM_NEMO_check/iDUT/iTL
     ----         ----                      -----     ------ 
   File ../src/TourLogic.sv
 ------------------------------------IF Branch------------------------------------
-    29                                         3     Count coming in to IF
-    29              1                          2     
-    31              1                    ***0***     
-    33              1                    ***0***     
-    35              1                    ***0***     
-    37              1                    ***0***     
+    30                                         3     Count coming in to IF
+    30              1                          2     
+    40              1                    ***0***     
+    48              1                    ***0***     
+    52              1                    ***0***     
+    56              1                    ***0***     
                                                1     All False Count
 Branch totals: 2 hits of 6 branches = 33.33%
 
 ------------------------------------IF Branch------------------------------------
-    43                                         3     Count coming in to IF
-    43              1                          2     
-    45              1                    ***0***     
-    47              1                    ***0***     
-    49              1                    ***0***     
-                                               1     All False Count
-Branch totals: 2 hits of 5 branches = 40.00%
-
-------------------------------------IF Branch------------------------------------
-    55                                         3     Count coming in to IF
-    55              1                          2     
-    57              1                    ***0***     
-    59              1                    ***0***     
-    61              1                    ***0***     
-                                               1     All False Count
-Branch totals: 2 hits of 5 branches = 40.00%
-
-------------------------------------IF Branch------------------------------------
-    67                                         3     Count coming in to IF
-    67              1                          2     
+    65                                         3     Count coming in to IF
+    65              1                          2     
+    67              1                    ***0***     
     69              1                    ***0***     
     71              1                    ***0***     
-    73              1                    ***0***     
                                                1     All False Count
 Branch totals: 2 hits of 5 branches = 40.00%
 
 ------------------------------------IF Branch------------------------------------
-    80                                         3     Count coming in to IF
-    80              1                          2     
+    78                                         3     Count coming in to IF
+    78              1                          2     
+    80              1                    ***0***     
     82              1                    ***0***     
-    84              1                          1     
-Branch totals: 2 hits of 3 branches = 66.66%
+    84              1                    ***0***     
+                                               1     All False Count
+Branch totals: 2 hits of 5 branches = 40.00%
 
 ------------------------------------IF Branch------------------------------------
     91                                         3     Count coming in to IF
     91              1                          2     
     93              1                    ***0***     
+    95              1                    ***0***     
+    97              1                    ***0***     
                                                1     All False Count
+Branch totals: 2 hits of 5 branches = 40.00%
+
+------------------------------------IF Branch------------------------------------
+    105                                        3     Count coming in to IF
+    105             1                          2     
+    107             1                    ***0***     
+    109             1                          1     
 Branch totals: 2 hits of 3 branches = 66.66%
 
 ------------------------------------IF Branch------------------------------------
-    100                                        3     Count coming in to IF
-    100             1                          2     
-    102             1                    ***0***     
-    104             1                    ***0***     
+    117                                        1     Count coming in to IF
+    117             1                    ***0***     
+                                               1     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    125                                        3     Count coming in to IF
+    125             1                          2     
+    127             1                    ***0***     
+    129             1                    ***0***     
                                                1     All False Count
 Branch totals: 2 hits of 4 branches = 50.00%
 
 ------------------------------------IF Branch------------------------------------
-    110                                        3     Count coming in to IF
-    110             1                          2     
-    112             1                    ***0***     
+    136                                        1     Count coming in to IF
+    136             1                    ***0***     
                                                1     All False Count
-Branch totals: 2 hits of 3 branches = 66.66%
-
-------------------------------------IF Branch------------------------------------
-    122                                        3     Count coming in to IF
-    122             1                          2     
-    124             1                          1     
-Branch totals: 2 hits of 2 branches = 100.00%
-
-------------------------------------CASE Branch------------------------------------
-    145                                        3     Count coming in to CASE
-    148             1                          3     
-    155             1                    ***0***     
-    161             1                    ***0***     
-    167             1                    ***0***     
-    184             1                    ***0***     
-Branch totals: 1 hit of 5 branches = 20.00%
-
-------------------------------------IF Branch------------------------------------
-    149                                        3     Count coming in to IF
-    149             1                    ***0***     
-                                               3     All False Count
 Branch totals: 1 hit of 2 branches = 50.00%
 
 ------------------------------------IF Branch------------------------------------
-    169                                  ***0***     Count coming in to IF
-    169             1                    ***0***     
+    147                                        3     Count coming in to IF
+    147             1                          2     
+    149             1                          1     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    164                                        3     Count coming in to CASE
+    166             1                          1     
+    173             1                    ***0***     
     179             1                    ***0***     
-    181             1                    ***0***     
+    184             1                    ***0***     
+    208             1                    ***0***     
+    220             1                          2     
+Branch totals: 2 hits of 6 branches = 33.33%
+
+------------------------------------IF Branch------------------------------------
+    167                                        1     Count coming in to IF
+    167             1                    ***0***     
+                                               1     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    187                                  ***0***     Count coming in to IF
+    187             1                    ***0***     
+    198             1                    ***0***     
+    202             1                    ***0***     
 Branch totals: 0 hits of 3 branches = 0.00%
 
 ------------------------------------IF Branch------------------------------------
-    174                                  ***0***     Count coming in to IF
-    174             1                    ***0***     
-    177             1                    ***0***     
-Branch totals: 0 hits of 2 branches = 0.00%
-
-------------------------------------IF Branch------------------------------------
-    188                                  ***0***     Count coming in to IF
-    188             1                    ***0***     
-    190             1                    ***0***     
+    189                                  ***0***     Count coming in to IF
+    189             1                    ***0***     
+    193             1                    ***0***     
 Branch totals: 0 hits of 2 branches = 0.00%
 
 ------------------------------------IF Branch------------------------------------
     211                                  ***0***     Count coming in to IF
     211             1                    ***0***     
+    215             1                    ***0***     
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    238                                  ***0***     Count coming in to IF
+    238             1                    ***0***     
                                          ***0***     All False Count
 Branch totals: 0 hits of 2 branches = 0.00%
 
 ------------------------------------IF Branch------------------------------------
-    212                                  ***0***     Count coming in to IF
-    212             1                    ***0***     
+    239                                  ***0***     Count coming in to IF
+    239             1                    ***0***     
                                          ***0***     All False Count
 Branch totals: 0 hits of 2 branches = 0.00%
 
 ------------------------------------CASE Branch------------------------------------
-    234                                  ***0***     Count coming in to CASE
-    235             1                    ***0***     
-    238             1                    ***0***     
-    241             1                    ***0***     
-    244             1                    ***0***     
-    247             1                    ***0***     
-    250             1                    ***0***     
-    253             1                    ***0***     
-    256             1                    ***0***     
+    261                                  ***0***     Count coming in to CASE
+    262             1                    ***0***     
+    265             1                    ***0***     
+    268             1                    ***0***     
+    271             1                    ***0***     
+    274             1                    ***0***     
+    277             1                    ***0***     
+    280             1                    ***0***     
+    283             1                    ***0***     
                                          ***0***     All False Count
 Branch totals: 0 hits of 9 branches = 0.00%
 
 ------------------------------------CASE Branch------------------------------------
-    274                                  ***0***     Count coming in to CASE
-    275             1                    ***0***     
-    278             1                    ***0***     
-    281             1                    ***0***     
-    284             1                    ***0***     
-    287             1                    ***0***     
-    290             1                    ***0***     
-    293             1                    ***0***     
-    296             1                    ***0***     
+    301                                  ***0***     Count coming in to CASE
+    302             1                    ***0***     
+    305             1                    ***0***     
+    308             1                    ***0***     
+    311             1                    ***0***     
+    314             1                    ***0***     
+    317             1                    ***0***     
+    320             1                    ***0***     
+    323             1                    ***0***     
                                          ***0***     All False Count
 Branch totals: 0 hits of 9 branches = 0.00%
 
@@ -1131,7 +1130,7 @@ Condition Coverage for instance /KnightsTour_tb_PWM_NEMO_check/iDUT/iTL --
 
   File ../src/TourLogic.sv
 ----------------Focused Condition View-------------------
-Line       174 Item    1  (move_num == 23)
+Line       189 Item    1  (move_num == 23)
 Condition totals: 0 of 1 input term covered = 0.00%
 
         Input Term   Covered  Reason for no coverage   Hint
@@ -1144,7 +1143,7 @@ Condition totals: 0 of 1 input term covered = 0.00%
   Row   2:    ***0***  (move_num == 23)_1    -                             
 
 ----------------Focused Condition View-------------------
-Line       179 Item    1  (move_try != 128)
+Line       198 Item    1  (move_try != 128)
 Condition totals: 0 of 1 input term covered = 0.00%
 
          Input Term   Covered  Reason for no coverage   Hint
@@ -1157,7 +1156,7 @@ Condition totals: 0 of 1 input term covered = 0.00%
   Row   2:    ***0***  (move_try != 128)_1   -                             
 
 ----------------Focused Condition View-------------------
-Line       188 Item    1  (last_move[move_num-1] == 128)
+Line       211 Item    1  (last_move[move_num-1] == 128)
 Condition totals: 0 of 1 input term covered = 0.00%
 
                       Input Term   Covered  Reason for no coverage   Hint
@@ -1170,7 +1169,7 @@ Condition totals: 0 of 1 input term covered = 0.00%
   Row   2:    ***0***  (last_move[move_num-1] == 128)_1  -                             
 
 ----------------Focused Condition View-------------------
-Line       211 Item    1  (((xpos + off_x(try)) < 5) && ((ypos + off_y(try)) < 5))
+Line       238 Item    1  (((xpos + off_x(try)) < 5) && ((ypos + off_y(try)) < 5))
 Condition totals: 0 of 2 input terms covered = 0.00%
 
                  Input Term   Covered  Reason for no coverage   Hint
@@ -1189,7 +1188,7 @@ Condition totals: 0 of 2 input terms covered = 0.00%
 Statement Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Statements                     100        35        65    35.00%
+    Statements                      99        33        66    33.33%
 
 ================================Statement Details================================
 
@@ -1199,109 +1198,108 @@ Statement Coverage for instance /KnightsTour_tb_PWM_NEMO_check/iDUT/iTL --
     ----         ----                      -----     ------ 
   File ../src/TourLogic.sv
     28              1                          3     
-    30              1                          2     
-    32              1                    ***0***     
-    34              1                    ***0***     
-    36              1                    ***0***     
-    38              1                    ***0***     
-    42              1                          3     
-    44              1                          2     
-    46              1                    ***0***     
-    48              1                    ***0***     
+    33              1                          2     
+    33              2                         10     
+    34              1                         10     
+    34              2                         50     
+    35              1                         50     
+    42              1                    ***0***     
+    42              2                    ***0***     
+    43              1                    ***0***     
+    43              2                    ***0***     
+    44              1                    ***0***     
     50              1                    ***0***     
-    54              1                          3     
-    56              1                          2     
-    58              1                    ***0***     
-    60              1                    ***0***     
-    62              1                    ***0***     
-    66              1                          3     
-    68              1                          2     
+    54              1                    ***0***     
+    57              1                    ***0***     
+    63              1                          3     
+    66              1                          2     
+    68              1                    ***0***     
     70              1                    ***0***     
     72              1                    ***0***     
-    74              1                    ***0***     
-    79              1                          3     
-    81              1                          2     
+    76              1                          3     
+    79              1                          2     
+    81              1                    ***0***     
     83              1                    ***0***     
-    85              1                          1     
-    90              1                          3     
+    85              1                    ***0***     
+    89              1                          3     
     92              1                          2     
     94              1                    ***0***     
-    99              1                          3     
-    101             1                          2     
-    103             1                    ***0***     
-    105             1                    ***0***     
-    109             1                          3     
-    111             1                          2     
-    113             1                    ***0***     
-    121             1                          3     
-    123             1                          2     
-    125             1                          1     
-    129             1                          3     
-    131             1                          3     
-    132             1                          3     
-    133             1                          3     
-    134             1                          3     
-    135             1                          3     
-    136             1                          3     
-    137             1                          3     
-    138             1                          3     
-    139             1                          3     
-    140             1                          3     
-    141             1                          3     
-    142             1                          3     
-    143             1                          3     
-    151             1                    ***0***     
-    152             1                    ***0***     
-    156             1                    ***0***     
-    157             1                    ***0***     
-    162             1                    ***0***     
-    163             1                    ***0***     
-    164             1                    ***0***     
+    96              1                    ***0***     
+    98              1                    ***0***     
+    103             1                          3     
+    106             1                          2     
+    108             1                    ***0***     
+    110             1                          1     
+    115             1                          1     
+    118             1                    ***0***     
+    123             1                          3     
+    126             1                          2     
+    128             1                    ***0***     
+    130             1                    ***0***     
+    134             1                          1     
+    137             1                    ***0***     
+    146             1                          3     
+    148             1                          2     
+    150             1                          1     
+    154             1                          3     
+    156             1                          3     
+    157             1                          3     
+    158             1                          3     
+    159             1                          3     
+    160             1                          3     
+    161             1                          3     
+    162             1                          3     
+    163             1                          3     
+    169             1                    ***0***     
     170             1                    ***0***     
-    171             1                    ***0***     
-    172             1                    ***0***     
-    173             1                    ***0***     
+    174             1                    ***0***     
     175             1                    ***0***     
-    176             1                    ***0***     
-    178             1                    ***0***     
     180             1                    ***0***     
-    182             1                    ***0***     
+    181             1                    ***0***     
     186             1                    ***0***     
-    187             1                    ***0***     
-    189             1                    ***0***     
+    188             1                    ***0***     
+    190             1                    ***0***     
     191             1                    ***0***     
-    197             1                          3     
-    208             1                    ***0***     
+    195             1                    ***0***     
+    199             1                    ***0***     
+    204             1                    ***0***     
     209             1                    ***0***     
     210             1                    ***0***     
-    210             2                    ***0***     
     213             1                    ***0***     
-    216             1                    ***0***     
-    218             1                    ***0***     
-    230             1                    ***0***     
+    217             1                    ***0***     
+    221             1                          2     
+    225             1                          2     
+    235             1                    ***0***     
     236             1                    ***0***     
-    239             1                    ***0***     
-    242             1                    ***0***     
+    237             1                    ***0***     
+    237             2                    ***0***     
+    240             1                    ***0***     
+    243             1                    ***0***     
     245             1                    ***0***     
-    248             1                    ***0***     
-    251             1                    ***0***     
-    254             1                    ***0***     
     257             1                    ***0***     
-    260             1                    ***0***     
+    263             1                    ***0***     
+    266             1                    ***0***     
+    269             1                    ***0***     
     272             1                    ***0***     
-    276             1                    ***0***     
-    279             1                    ***0***     
-    282             1                    ***0***     
-    285             1                    ***0***     
-    288             1                    ***0***     
-    291             1                    ***0***     
-    294             1                    ***0***     
-    297             1                    ***0***     
-    300             1                    ***0***     
+    275             1                    ***0***     
+    278             1                    ***0***     
+    281             1                    ***0***     
+    284             1                    ***0***     
+    287             1                    ***0***     
+    299             1                    ***0***     
+    303             1                    ***0***     
+    306             1                    ***0***     
+    309             1                    ***0***     
+    312             1                    ***0***     
+    315             1                    ***0***     
+    318             1                    ***0***     
+    321             1                    ***0***     
+    324             1                    ***0***     
+    327             1                    ***0***     
 Toggle Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Toggles                        138         2       136     1.44%
+    Toggles                        128         2       126     1.56%
 
 ================================Toggle Details================================
 
@@ -1311,12 +1309,8 @@ Toggle Coverage for instance /KnightsTour_tb_PWM_NEMO_check/iDUT/iTL --
                                               ---------------------------------------------------------------
                                            back_up           0           0                                0.00 
                                               calc           0           0                                0.00 
-                                     decr_move_num           0           0                                0.00 
                                               done           0           0                                0.00 
-                                     incr_move_num           0           0                                0.00 
                                         init_board           0           0                                0.00 
-                                     init_move_try           0           0                                0.00 
-                                              last           0           0                                0.00 
                                        making_move           0           0                                0.00 
                                      move_num[0-4]           0           0                                0.00 
                                      move_try[0-7]           0           0                                0.00 
@@ -1332,17 +1326,16 @@ Toggle Coverage for instance /KnightsTour_tb_PWM_NEMO_check/iDUT/iTL --
                                                                   POSSIBLE           0        0.00 
                                                                  MAKE_MOVE           0        0.00 
                                                                     BACKUP           0        0.00 
-                                        update_pos           0           0                                0.00 
                                    update_position           0           0                                0.00 
                                            x[0-31]           0           0                                0.00 
                                            xx[0-2]           0           0                                0.00 
                                            yy[0-2]           0           0                                0.00 
 
-Total Node Count     =         74 
+Total Node Count     =         69 
 Toggled Node Count   =          2 
-Untoggled Node Count =         72 
+Untoggled Node Count =         67 
 
-Toggle Coverage      =       1.44% (2 of 138 bins)
+Toggle Coverage      =       1.56% (2 of 128 bins)
 
 =================================================================================
 === Instance: /KnightsTour_tb_PWM_NEMO_check/iDUT/iTC
@@ -1381,7 +1374,7 @@ Branch totals: 1 hit of 2 branches = 50.00%
 Branch totals: 0 hits of 2 branches = 0.00%
 
 ------------------------------------CASE Branch------------------------------------
-    86                                         2     Count coming in to CASE
+    86                                         1     Count coming in to CASE
     87              1                    ***0***     
     92              1                    ***0***     
     97              1                    ***0***     
@@ -1390,7 +1383,7 @@ Branch totals: 0 hits of 2 branches = 0.00%
     112             1                    ***0***     
     117             1                    ***0***     
     122             1                    ***0***     
-    127             1                          2     
+    127             1                          1     
 Branch totals: 1 hit of 9 branches = 11.11%
 
 ------------------------------------IF Branch------------------------------------
@@ -1520,7 +1513,7 @@ Statement Coverage for instance /KnightsTour_tb_PWM_NEMO_check/iDUT/iTC --
     Line         Item                      Count     Source 
     ----         ----                      -----     ------ 
   File ../src/TourCmd.sv
-    42              1                          2     
+    42              1                          1     
     56              1                          3     
     59              1                          2     
     61              1                    ***0***     
@@ -1529,7 +1522,7 @@ Statement Coverage for instance /KnightsTour_tb_PWM_NEMO_check/iDUT/iTC --
     72              1                          2     
     75              1                    ***0***     
     77              1                    ***0***     
-    85              1                          2     
+    85              1                          1     
     88              1                    ***0***     
     89              1                    ***0***     
     93              1                    ***0***     
@@ -1546,8 +1539,8 @@ Statement Coverage for instance /KnightsTour_tb_PWM_NEMO_check/iDUT/iTC --
     119             1                    ***0***     
     123             1                    ***0***     
     124             1                    ***0***     
-    128             1                          2     
-    129             1                          2     
+    128             1                          1     
+    129             1                          1     
     135             1                          2     
     137             1                          3     
     146             1                          3     
@@ -6843,7 +6836,7 @@ Toggle Coverage      =      13.40% (26 of 194 bins)
 Branch Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Branches                        72        20        52    27.77%
+    Branches                        71        19        52    26.76%
 
 ================================Branch Details================================
 
@@ -6853,146 +6846,145 @@ Branch Coverage for instance /KnightsTour_tb_cal_check/iDUT/iTL
     ----         ----                      -----     ------ 
   File ../src/TourLogic.sv
 ------------------------------------IF Branch------------------------------------
-    29                                        20     Count coming in to IF
-    29              1                          2     
-    31              1                    ***0***     
-    33              1                    ***0***     
-    35              1                    ***0***     
-    37              1                    ***0***     
+    30                                        20     Count coming in to IF
+    30              1                          2     
+    40              1                    ***0***     
+    48              1                    ***0***     
+    52              1                    ***0***     
+    56              1                    ***0***     
                                               18     All False Count
 Branch totals: 2 hits of 6 branches = 33.33%
 
 ------------------------------------IF Branch------------------------------------
-    43                                        20     Count coming in to IF
-    43              1                          2     
-    45              1                    ***0***     
-    47              1                    ***0***     
-    49              1                    ***0***     
-                                              18     All False Count
-Branch totals: 2 hits of 5 branches = 40.00%
-
-------------------------------------IF Branch------------------------------------
-    55                                        20     Count coming in to IF
-    55              1                          2     
-    57              1                    ***0***     
-    59              1                    ***0***     
-    61              1                    ***0***     
-                                              18     All False Count
-Branch totals: 2 hits of 5 branches = 40.00%
-
-------------------------------------IF Branch------------------------------------
-    67                                         3     Count coming in to IF
-    67              1                          2     
+    65                                        20     Count coming in to IF
+    65              1                          2     
+    67              1                    ***0***     
     69              1                    ***0***     
     71              1                    ***0***     
-    73              1                    ***0***     
-                                               1     All False Count
+                                              18     All False Count
 Branch totals: 2 hits of 5 branches = 40.00%
 
 ------------------------------------IF Branch------------------------------------
-    80                                         3     Count coming in to IF
-    80              1                          2     
+    78                                        20     Count coming in to IF
+    78              1                          2     
+    80              1                    ***0***     
     82              1                    ***0***     
-    84              1                          1     
-Branch totals: 2 hits of 3 branches = 66.66%
+    84              1                    ***0***     
+                                              18     All False Count
+Branch totals: 2 hits of 5 branches = 40.00%
 
 ------------------------------------IF Branch------------------------------------
     91                                         3     Count coming in to IF
     91              1                          2     
     93              1                    ***0***     
+    95              1                    ***0***     
+    97              1                    ***0***     
                                                1     All False Count
+Branch totals: 2 hits of 5 branches = 40.00%
+
+------------------------------------IF Branch------------------------------------
+    105                                        3     Count coming in to IF
+    105             1                          2     
+    107             1                    ***0***     
+    109             1                          1     
 Branch totals: 2 hits of 3 branches = 66.66%
 
 ------------------------------------IF Branch------------------------------------
-    100                                        3     Count coming in to IF
-    100             1                          2     
-    102             1                    ***0***     
-    104             1                    ***0***     
+    117                                        1     Count coming in to IF
+    117             1                    ***0***     
+                                               1     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    125                                        3     Count coming in to IF
+    125             1                          2     
+    127             1                    ***0***     
+    129             1                    ***0***     
                                                1     All False Count
 Branch totals: 2 hits of 4 branches = 50.00%
 
 ------------------------------------IF Branch------------------------------------
-    110                                        3     Count coming in to IF
-    110             1                          2     
-    112             1                    ***0***     
+    136                                        1     Count coming in to IF
+    136             1                    ***0***     
                                                1     All False Count
-Branch totals: 2 hits of 3 branches = 66.66%
-
-------------------------------------IF Branch------------------------------------
-    122                                        3     Count coming in to IF
-    122             1                          2     
-    124             1                          1     
-Branch totals: 2 hits of 2 branches = 100.00%
-
-------------------------------------CASE Branch------------------------------------
-    145                                        3     Count coming in to CASE
-    148             1                          3     
-    155             1                    ***0***     
-    161             1                    ***0***     
-    167             1                    ***0***     
-    184             1                    ***0***     
-Branch totals: 1 hit of 5 branches = 20.00%
-
-------------------------------------IF Branch------------------------------------
-    149                                        3     Count coming in to IF
-    149             1                    ***0***     
-                                               3     All False Count
 Branch totals: 1 hit of 2 branches = 50.00%
 
 ------------------------------------IF Branch------------------------------------
-    169                                  ***0***     Count coming in to IF
-    169             1                    ***0***     
+    147                                        3     Count coming in to IF
+    147             1                          2     
+    149             1                          1     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    164                                        3     Count coming in to CASE
+    166             1                          1     
+    173             1                    ***0***     
     179             1                    ***0***     
-    181             1                    ***0***     
+    184             1                    ***0***     
+    208             1                    ***0***     
+    220             1                          2     
+Branch totals: 2 hits of 6 branches = 33.33%
+
+------------------------------------IF Branch------------------------------------
+    167                                        1     Count coming in to IF
+    167             1                    ***0***     
+                                               1     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    187                                  ***0***     Count coming in to IF
+    187             1                    ***0***     
+    198             1                    ***0***     
+    202             1                    ***0***     
 Branch totals: 0 hits of 3 branches = 0.00%
 
 ------------------------------------IF Branch------------------------------------
-    174                                  ***0***     Count coming in to IF
-    174             1                    ***0***     
-    177             1                    ***0***     
-Branch totals: 0 hits of 2 branches = 0.00%
-
-------------------------------------IF Branch------------------------------------
-    188                                  ***0***     Count coming in to IF
-    188             1                    ***0***     
-    190             1                    ***0***     
+    189                                  ***0***     Count coming in to IF
+    189             1                    ***0***     
+    193             1                    ***0***     
 Branch totals: 0 hits of 2 branches = 0.00%
 
 ------------------------------------IF Branch------------------------------------
     211                                  ***0***     Count coming in to IF
     211             1                    ***0***     
+    215             1                    ***0***     
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    238                                  ***0***     Count coming in to IF
+    238             1                    ***0***     
                                          ***0***     All False Count
 Branch totals: 0 hits of 2 branches = 0.00%
 
 ------------------------------------IF Branch------------------------------------
-    212                                  ***0***     Count coming in to IF
-    212             1                    ***0***     
+    239                                  ***0***     Count coming in to IF
+    239             1                    ***0***     
                                          ***0***     All False Count
 Branch totals: 0 hits of 2 branches = 0.00%
 
 ------------------------------------CASE Branch------------------------------------
-    234                                  ***0***     Count coming in to CASE
-    235             1                    ***0***     
-    238             1                    ***0***     
-    241             1                    ***0***     
-    244             1                    ***0***     
-    247             1                    ***0***     
-    250             1                    ***0***     
-    253             1                    ***0***     
-    256             1                    ***0***     
+    261                                  ***0***     Count coming in to CASE
+    262             1                    ***0***     
+    265             1                    ***0***     
+    268             1                    ***0***     
+    271             1                    ***0***     
+    274             1                    ***0***     
+    277             1                    ***0***     
+    280             1                    ***0***     
+    283             1                    ***0***     
                                          ***0***     All False Count
 Branch totals: 0 hits of 9 branches = 0.00%
 
 ------------------------------------CASE Branch------------------------------------
-    274                                  ***0***     Count coming in to CASE
-    275             1                    ***0***     
-    278             1                    ***0***     
-    281             1                    ***0***     
-    284             1                    ***0***     
-    287             1                    ***0***     
-    290             1                    ***0***     
-    293             1                    ***0***     
-    296             1                    ***0***     
+    301                                  ***0***     Count coming in to CASE
+    302             1                    ***0***     
+    305             1                    ***0***     
+    308             1                    ***0***     
+    311             1                    ***0***     
+    314             1                    ***0***     
+    317             1                    ***0***     
+    320             1                    ***0***     
+    323             1                    ***0***     
                                          ***0***     All False Count
 Branch totals: 0 hits of 9 branches = 0.00%
 
@@ -7008,7 +7000,7 @@ Condition Coverage for instance /KnightsTour_tb_cal_check/iDUT/iTL --
 
   File ../src/TourLogic.sv
 ----------------Focused Condition View-------------------
-Line       174 Item    1  (move_num == 23)
+Line       189 Item    1  (move_num == 23)
 Condition totals: 0 of 1 input term covered = 0.00%
 
         Input Term   Covered  Reason for no coverage   Hint
@@ -7021,7 +7013,7 @@ Condition totals: 0 of 1 input term covered = 0.00%
   Row   2:    ***0***  (move_num == 23)_1    -                             
 
 ----------------Focused Condition View-------------------
-Line       179 Item    1  (move_try != 128)
+Line       198 Item    1  (move_try != 128)
 Condition totals: 0 of 1 input term covered = 0.00%
 
          Input Term   Covered  Reason for no coverage   Hint
@@ -7034,7 +7026,7 @@ Condition totals: 0 of 1 input term covered = 0.00%
   Row   2:    ***0***  (move_try != 128)_1   -                             
 
 ----------------Focused Condition View-------------------
-Line       188 Item    1  (last_move[move_num-1] == 128)
+Line       211 Item    1  (last_move[move_num-1] == 128)
 Condition totals: 0 of 1 input term covered = 0.00%
 
                       Input Term   Covered  Reason for no coverage   Hint
@@ -7047,7 +7039,7 @@ Condition totals: 0 of 1 input term covered = 0.00%
   Row   2:    ***0***  (last_move[move_num-1] == 128)_1  -                             
 
 ----------------Focused Condition View-------------------
-Line       211 Item    1  (((xpos + off_x(try)) < 5) && ((ypos + off_y(try)) < 5))
+Line       238 Item    1  (((xpos + off_x(try)) < 5) && ((ypos + off_y(try)) < 5))
 Condition totals: 0 of 2 input terms covered = 0.00%
 
                  Input Term   Covered  Reason for no coverage   Hint
@@ -7066,7 +7058,7 @@ Condition totals: 0 of 2 input terms covered = 0.00%
 Statement Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Statements                     100        35        65    35.00%
+    Statements                      99        33        66    33.33%
 
 ================================Statement Details================================
 
@@ -7076,109 +7068,108 @@ Statement Coverage for instance /KnightsTour_tb_cal_check/iDUT/iTL --
     ----         ----                      -----     ------ 
   File ../src/TourLogic.sv
     28              1                         20     
-    30              1                          2     
-    32              1                    ***0***     
-    34              1                    ***0***     
-    36              1                    ***0***     
-    38              1                    ***0***     
-    42              1                         20     
-    44              1                          2     
-    46              1                    ***0***     
-    48              1                    ***0***     
+    33              1                          2     
+    33              2                         10     
+    34              1                         10     
+    34              2                         50     
+    35              1                         50     
+    42              1                    ***0***     
+    42              2                    ***0***     
+    43              1                    ***0***     
+    43              2                    ***0***     
+    44              1                    ***0***     
     50              1                    ***0***     
-    54              1                         20     
-    56              1                          2     
-    58              1                    ***0***     
-    60              1                    ***0***     
-    62              1                    ***0***     
-    66              1                          3     
-    68              1                          2     
+    54              1                    ***0***     
+    57              1                    ***0***     
+    63              1                         20     
+    66              1                          2     
+    68              1                    ***0***     
     70              1                    ***0***     
     72              1                    ***0***     
-    74              1                    ***0***     
-    79              1                          3     
-    81              1                          2     
+    76              1                         20     
+    79              1                          2     
+    81              1                    ***0***     
     83              1                    ***0***     
-    85              1                          1     
-    90              1                          3     
+    85              1                    ***0***     
+    89              1                          3     
     92              1                          2     
     94              1                    ***0***     
-    99              1                          3     
-    101             1                          2     
-    103             1                    ***0***     
-    105             1                    ***0***     
-    109             1                          3     
-    111             1                          2     
-    113             1                    ***0***     
-    121             1                          3     
-    123             1                          2     
-    125             1                          1     
-    129             1                          3     
-    131             1                          3     
-    132             1                          3     
-    133             1                          3     
-    134             1                          3     
-    135             1                          3     
-    136             1                          3     
-    137             1                          3     
-    138             1                          3     
-    139             1                          3     
-    140             1                          3     
-    141             1                          3     
-    142             1                          3     
-    143             1                          3     
-    151             1                    ***0***     
-    152             1                    ***0***     
-    156             1                    ***0***     
-    157             1                    ***0***     
-    162             1                    ***0***     
-    163             1                    ***0***     
-    164             1                    ***0***     
+    96              1                    ***0***     
+    98              1                    ***0***     
+    103             1                          3     
+    106             1                          2     
+    108             1                    ***0***     
+    110             1                          1     
+    115             1                          1     
+    118             1                    ***0***     
+    123             1                          3     
+    126             1                          2     
+    128             1                    ***0***     
+    130             1                    ***0***     
+    134             1                          1     
+    137             1                    ***0***     
+    146             1                          3     
+    148             1                          2     
+    150             1                          1     
+    154             1                          3     
+    156             1                          3     
+    157             1                          3     
+    158             1                          3     
+    159             1                          3     
+    160             1                          3     
+    161             1                          3     
+    162             1                          3     
+    163             1                          3     
+    169             1                    ***0***     
     170             1                    ***0***     
-    171             1                    ***0***     
-    172             1                    ***0***     
-    173             1                    ***0***     
+    174             1                    ***0***     
     175             1                    ***0***     
-    176             1                    ***0***     
-    178             1                    ***0***     
     180             1                    ***0***     
-    182             1                    ***0***     
+    181             1                    ***0***     
     186             1                    ***0***     
-    187             1                    ***0***     
-    189             1                    ***0***     
+    188             1                    ***0***     
+    190             1                    ***0***     
     191             1                    ***0***     
-    197             1                          3     
-    208             1                    ***0***     
+    195             1                    ***0***     
+    199             1                    ***0***     
+    204             1                    ***0***     
     209             1                    ***0***     
     210             1                    ***0***     
-    210             2                    ***0***     
     213             1                    ***0***     
-    216             1                    ***0***     
-    218             1                    ***0***     
-    230             1                    ***0***     
+    217             1                    ***0***     
+    221             1                          2     
+    225             1                          2     
+    235             1                    ***0***     
     236             1                    ***0***     
-    239             1                    ***0***     
-    242             1                    ***0***     
+    237             1                    ***0***     
+    237             2                    ***0***     
+    240             1                    ***0***     
+    243             1                    ***0***     
     245             1                    ***0***     
-    248             1                    ***0***     
-    251             1                    ***0***     
-    254             1                    ***0***     
     257             1                    ***0***     
-    260             1                    ***0***     
+    263             1                    ***0***     
+    266             1                    ***0***     
+    269             1                    ***0***     
     272             1                    ***0***     
-    276             1                    ***0***     
-    279             1                    ***0***     
-    282             1                    ***0***     
-    285             1                    ***0***     
-    288             1                    ***0***     
-    291             1                    ***0***     
-    294             1                    ***0***     
-    297             1                    ***0***     
-    300             1                    ***0***     
+    275             1                    ***0***     
+    278             1                    ***0***     
+    281             1                    ***0***     
+    284             1                    ***0***     
+    287             1                    ***0***     
+    299             1                    ***0***     
+    303             1                    ***0***     
+    306             1                    ***0***     
+    309             1                    ***0***     
+    312             1                    ***0***     
+    315             1                    ***0***     
+    318             1                    ***0***     
+    321             1                    ***0***     
+    324             1                    ***0***     
+    327             1                    ***0***     
 Toggle Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Toggles                        138         2       136     1.44%
+    Toggles                        128         2       126     1.56%
 
 ================================Toggle Details================================
 
@@ -7188,12 +7179,8 @@ Toggle Coverage for instance /KnightsTour_tb_cal_check/iDUT/iTL --
                                               ---------------------------------------------------------------
                                            back_up           0           0                                0.00 
                                               calc           0           0                                0.00 
-                                     decr_move_num           0           0                                0.00 
                                               done           0           0                                0.00 
-                                     incr_move_num           0           0                                0.00 
                                         init_board           0           0                                0.00 
-                                     init_move_try           0           0                                0.00 
-                                              last           0           0                                0.00 
                                        making_move           0           0                                0.00 
                                      move_num[0-4]           0           0                                0.00 
                                      move_try[0-7]           0           0                                0.00 
@@ -7209,17 +7196,16 @@ Toggle Coverage for instance /KnightsTour_tb_cal_check/iDUT/iTL --
                                                                   POSSIBLE           0        0.00 
                                                                  MAKE_MOVE           0        0.00 
                                                                     BACKUP           0        0.00 
-                                        update_pos           0           0                                0.00 
                                    update_position           0           0                                0.00 
                                            x[0-31]           0           0                                0.00 
                                            xx[0-2]           0           0                                0.00 
                                            yy[0-2]           0           0                                0.00 
 
-Total Node Count     =         74 
+Total Node Count     =         69 
 Toggled Node Count   =          2 
-Untoggled Node Count =         72 
+Untoggled Node Count =         67 
 
-Toggle Coverage      =       1.44% (2 of 138 bins)
+Toggle Coverage      =       1.56% (2 of 128 bins)
 
 =================================================================================
 === Instance: /KnightsTour_tb_cal_check/iDUT/iTC
@@ -7258,7 +7244,7 @@ Branch totals: 1 hit of 2 branches = 50.00%
 Branch totals: 0 hits of 2 branches = 0.00%
 
 ------------------------------------CASE Branch------------------------------------
-    86                                         2     Count coming in to CASE
+    86                                         1     Count coming in to CASE
     87              1                    ***0***     
     92              1                    ***0***     
     97              1                    ***0***     
@@ -7267,7 +7253,7 @@ Branch totals: 0 hits of 2 branches = 0.00%
     112             1                    ***0***     
     117             1                    ***0***     
     122             1                    ***0***     
-    127             1                          2     
+    127             1                          1     
 Branch totals: 1 hit of 9 branches = 11.11%
 
 ------------------------------------IF Branch------------------------------------
@@ -7397,7 +7383,7 @@ Statement Coverage for instance /KnightsTour_tb_cal_check/iDUT/iTC --
     Line         Item                      Count     Source 
     ----         ----                      -----     ------ 
   File ../src/TourCmd.sv
-    42              1                          2     
+    42              1                          1     
     56              1                          3     
     59              1                          2     
     61              1                    ***0***     
@@ -7406,7 +7392,7 @@ Statement Coverage for instance /KnightsTour_tb_cal_check/iDUT/iTC --
     72              1                          2     
     75              1                    ***0***     
     77              1                    ***0***     
-    85              1                          2     
+    85              1                          1     
     88              1                    ***0***     
     89              1                    ***0***     
     93              1                    ***0***     
@@ -7423,8 +7409,8 @@ Statement Coverage for instance /KnightsTour_tb_cal_check/iDUT/iTC --
     119             1                    ***0***     
     123             1                    ***0***     
     124             1                    ***0***     
-    128             1                          2     
-    129             1                          2     
+    128             1                          1     
+    129             1                          1     
     135             1                          2     
     137             1                         20     
     146             1                          3     
@@ -12450,7 +12436,7 @@ Toggle Coverage      =      47.93% (93 of 194 bins)
 Branch Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Branches                        72        20        52    27.77%
+    Branches                        71        19        52    26.76%
 
 ================================Branch Details================================
 
@@ -12460,146 +12446,145 @@ Branch Coverage for instance /KnightsTour_tb_moveW1/iDUT/iTL
     ----         ----                      -----     ------ 
   File ../src/TourLogic.sv
 ------------------------------------IF Branch------------------------------------
-    29                                        41     Count coming in to IF
-    29              1                          2     
-    31              1                    ***0***     
-    33              1                    ***0***     
-    35              1                    ***0***     
-    37              1                    ***0***     
+    30                                        41     Count coming in to IF
+    30              1                          2     
+    40              1                    ***0***     
+    48              1                    ***0***     
+    52              1                    ***0***     
+    56              1                    ***0***     
                                               39     All False Count
 Branch totals: 2 hits of 6 branches = 33.33%
 
 ------------------------------------IF Branch------------------------------------
-    43                                        41     Count coming in to IF
-    43              1                          2     
-    45              1                    ***0***     
-    47              1                    ***0***     
-    49              1                    ***0***     
-                                              39     All False Count
-Branch totals: 2 hits of 5 branches = 40.00%
-
-------------------------------------IF Branch------------------------------------
-    55                                        41     Count coming in to IF
-    55              1                          2     
-    57              1                    ***0***     
-    59              1                    ***0***     
-    61              1                    ***0***     
-                                              39     All False Count
-Branch totals: 2 hits of 5 branches = 40.00%
-
-------------------------------------IF Branch------------------------------------
-    67                                         3     Count coming in to IF
-    67              1                          2     
+    65                                        41     Count coming in to IF
+    65              1                          2     
+    67              1                    ***0***     
     69              1                    ***0***     
     71              1                    ***0***     
-    73              1                    ***0***     
-                                               1     All False Count
+                                              39     All False Count
 Branch totals: 2 hits of 5 branches = 40.00%
 
 ------------------------------------IF Branch------------------------------------
-    80                                         3     Count coming in to IF
-    80              1                          2     
+    78                                        41     Count coming in to IF
+    78              1                          2     
+    80              1                    ***0***     
     82              1                    ***0***     
-    84              1                          1     
-Branch totals: 2 hits of 3 branches = 66.66%
+    84              1                    ***0***     
+                                              39     All False Count
+Branch totals: 2 hits of 5 branches = 40.00%
 
 ------------------------------------IF Branch------------------------------------
     91                                         3     Count coming in to IF
     91              1                          2     
     93              1                    ***0***     
+    95              1                    ***0***     
+    97              1                    ***0***     
                                                1     All False Count
+Branch totals: 2 hits of 5 branches = 40.00%
+
+------------------------------------IF Branch------------------------------------
+    105                                        3     Count coming in to IF
+    105             1                          2     
+    107             1                    ***0***     
+    109             1                          1     
 Branch totals: 2 hits of 3 branches = 66.66%
 
 ------------------------------------IF Branch------------------------------------
-    100                                        3     Count coming in to IF
-    100             1                          2     
-    102             1                    ***0***     
-    104             1                    ***0***     
+    117                                        1     Count coming in to IF
+    117             1                    ***0***     
+                                               1     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    125                                        3     Count coming in to IF
+    125             1                          2     
+    127             1                    ***0***     
+    129             1                    ***0***     
                                                1     All False Count
 Branch totals: 2 hits of 4 branches = 50.00%
 
 ------------------------------------IF Branch------------------------------------
-    110                                        3     Count coming in to IF
-    110             1                          2     
-    112             1                    ***0***     
+    136                                        1     Count coming in to IF
+    136             1                    ***0***     
                                                1     All False Count
-Branch totals: 2 hits of 3 branches = 66.66%
-
-------------------------------------IF Branch------------------------------------
-    122                                        3     Count coming in to IF
-    122             1                          2     
-    124             1                          1     
-Branch totals: 2 hits of 2 branches = 100.00%
-
-------------------------------------CASE Branch------------------------------------
-    145                                        3     Count coming in to CASE
-    148             1                          3     
-    155             1                    ***0***     
-    161             1                    ***0***     
-    167             1                    ***0***     
-    184             1                    ***0***     
-Branch totals: 1 hit of 5 branches = 20.00%
-
-------------------------------------IF Branch------------------------------------
-    149                                        3     Count coming in to IF
-    149             1                    ***0***     
-                                               3     All False Count
 Branch totals: 1 hit of 2 branches = 50.00%
 
 ------------------------------------IF Branch------------------------------------
-    169                                  ***0***     Count coming in to IF
-    169             1                    ***0***     
+    147                                        3     Count coming in to IF
+    147             1                          2     
+    149             1                          1     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    164                                        3     Count coming in to CASE
+    166             1                          1     
+    173             1                    ***0***     
     179             1                    ***0***     
-    181             1                    ***0***     
+    184             1                    ***0***     
+    208             1                    ***0***     
+    220             1                          2     
+Branch totals: 2 hits of 6 branches = 33.33%
+
+------------------------------------IF Branch------------------------------------
+    167                                        1     Count coming in to IF
+    167             1                    ***0***     
+                                               1     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    187                                  ***0***     Count coming in to IF
+    187             1                    ***0***     
+    198             1                    ***0***     
+    202             1                    ***0***     
 Branch totals: 0 hits of 3 branches = 0.00%
 
 ------------------------------------IF Branch------------------------------------
-    174                                  ***0***     Count coming in to IF
-    174             1                    ***0***     
-    177             1                    ***0***     
-Branch totals: 0 hits of 2 branches = 0.00%
-
-------------------------------------IF Branch------------------------------------
-    188                                  ***0***     Count coming in to IF
-    188             1                    ***0***     
-    190             1                    ***0***     
+    189                                  ***0***     Count coming in to IF
+    189             1                    ***0***     
+    193             1                    ***0***     
 Branch totals: 0 hits of 2 branches = 0.00%
 
 ------------------------------------IF Branch------------------------------------
     211                                  ***0***     Count coming in to IF
     211             1                    ***0***     
+    215             1                    ***0***     
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    238                                  ***0***     Count coming in to IF
+    238             1                    ***0***     
                                          ***0***     All False Count
 Branch totals: 0 hits of 2 branches = 0.00%
 
 ------------------------------------IF Branch------------------------------------
-    212                                  ***0***     Count coming in to IF
-    212             1                    ***0***     
+    239                                  ***0***     Count coming in to IF
+    239             1                    ***0***     
                                          ***0***     All False Count
 Branch totals: 0 hits of 2 branches = 0.00%
 
 ------------------------------------CASE Branch------------------------------------
-    234                                  ***0***     Count coming in to CASE
-    235             1                    ***0***     
-    238             1                    ***0***     
-    241             1                    ***0***     
-    244             1                    ***0***     
-    247             1                    ***0***     
-    250             1                    ***0***     
-    253             1                    ***0***     
-    256             1                    ***0***     
+    261                                  ***0***     Count coming in to CASE
+    262             1                    ***0***     
+    265             1                    ***0***     
+    268             1                    ***0***     
+    271             1                    ***0***     
+    274             1                    ***0***     
+    277             1                    ***0***     
+    280             1                    ***0***     
+    283             1                    ***0***     
                                          ***0***     All False Count
 Branch totals: 0 hits of 9 branches = 0.00%
 
 ------------------------------------CASE Branch------------------------------------
-    274                                  ***0***     Count coming in to CASE
-    275             1                    ***0***     
-    278             1                    ***0***     
-    281             1                    ***0***     
-    284             1                    ***0***     
-    287             1                    ***0***     
-    290             1                    ***0***     
-    293             1                    ***0***     
-    296             1                    ***0***     
+    301                                  ***0***     Count coming in to CASE
+    302             1                    ***0***     
+    305             1                    ***0***     
+    308             1                    ***0***     
+    311             1                    ***0***     
+    314             1                    ***0***     
+    317             1                    ***0***     
+    320             1                    ***0***     
+    323             1                    ***0***     
                                          ***0***     All False Count
 Branch totals: 0 hits of 9 branches = 0.00%
 
@@ -12615,7 +12600,7 @@ Condition Coverage for instance /KnightsTour_tb_moveW1/iDUT/iTL --
 
   File ../src/TourLogic.sv
 ----------------Focused Condition View-------------------
-Line       174 Item    1  (move_num == 23)
+Line       189 Item    1  (move_num == 23)
 Condition totals: 0 of 1 input term covered = 0.00%
 
         Input Term   Covered  Reason for no coverage   Hint
@@ -12628,7 +12613,7 @@ Condition totals: 0 of 1 input term covered = 0.00%
   Row   2:    ***0***  (move_num == 23)_1    -                             
 
 ----------------Focused Condition View-------------------
-Line       179 Item    1  (move_try != 128)
+Line       198 Item    1  (move_try != 128)
 Condition totals: 0 of 1 input term covered = 0.00%
 
          Input Term   Covered  Reason for no coverage   Hint
@@ -12641,7 +12626,7 @@ Condition totals: 0 of 1 input term covered = 0.00%
   Row   2:    ***0***  (move_try != 128)_1   -                             
 
 ----------------Focused Condition View-------------------
-Line       188 Item    1  (last_move[move_num-1] == 128)
+Line       211 Item    1  (last_move[move_num-1] == 128)
 Condition totals: 0 of 1 input term covered = 0.00%
 
                       Input Term   Covered  Reason for no coverage   Hint
@@ -12654,7 +12639,7 @@ Condition totals: 0 of 1 input term covered = 0.00%
   Row   2:    ***0***  (last_move[move_num-1] == 128)_1  -                             
 
 ----------------Focused Condition View-------------------
-Line       211 Item    1  (((xpos + off_x(try)) < 5) && ((ypos + off_y(try)) < 5))
+Line       238 Item    1  (((xpos + off_x(try)) < 5) && ((ypos + off_y(try)) < 5))
 Condition totals: 0 of 2 input terms covered = 0.00%
 
                  Input Term   Covered  Reason for no coverage   Hint
@@ -12673,7 +12658,7 @@ Condition totals: 0 of 2 input terms covered = 0.00%
 Statement Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Statements                     100        35        65    35.00%
+    Statements                      99        33        66    33.33%
 
 ================================Statement Details================================
 
@@ -12683,109 +12668,108 @@ Statement Coverage for instance /KnightsTour_tb_moveW1/iDUT/iTL --
     ----         ----                      -----     ------ 
   File ../src/TourLogic.sv
     28              1                         41     
-    30              1                          2     
-    32              1                    ***0***     
-    34              1                    ***0***     
-    36              1                    ***0***     
-    38              1                    ***0***     
-    42              1                         41     
-    44              1                          2     
-    46              1                    ***0***     
-    48              1                    ***0***     
+    33              1                          2     
+    33              2                         10     
+    34              1                         10     
+    34              2                         50     
+    35              1                         50     
+    42              1                    ***0***     
+    42              2                    ***0***     
+    43              1                    ***0***     
+    43              2                    ***0***     
+    44              1                    ***0***     
     50              1                    ***0***     
-    54              1                         41     
-    56              1                          2     
-    58              1                    ***0***     
-    60              1                    ***0***     
-    62              1                    ***0***     
-    66              1                          3     
-    68              1                          2     
+    54              1                    ***0***     
+    57              1                    ***0***     
+    63              1                         41     
+    66              1                          2     
+    68              1                    ***0***     
     70              1                    ***0***     
     72              1                    ***0***     
-    74              1                    ***0***     
-    79              1                          3     
-    81              1                          2     
+    76              1                         41     
+    79              1                          2     
+    81              1                    ***0***     
     83              1                    ***0***     
-    85              1                          1     
-    90              1                          3     
+    85              1                    ***0***     
+    89              1                          3     
     92              1                          2     
     94              1                    ***0***     
-    99              1                          3     
-    101             1                          2     
-    103             1                    ***0***     
-    105             1                    ***0***     
-    109             1                          3     
-    111             1                          2     
-    113             1                    ***0***     
-    121             1                          3     
-    123             1                          2     
-    125             1                          1     
-    129             1                          3     
-    131             1                          3     
-    132             1                          3     
-    133             1                          3     
-    134             1                          3     
-    135             1                          3     
-    136             1                          3     
-    137             1                          3     
-    138             1                          3     
-    139             1                          3     
-    140             1                          3     
-    141             1                          3     
-    142             1                          3     
-    143             1                          3     
-    151             1                    ***0***     
-    152             1                    ***0***     
-    156             1                    ***0***     
-    157             1                    ***0***     
-    162             1                    ***0***     
-    163             1                    ***0***     
-    164             1                    ***0***     
+    96              1                    ***0***     
+    98              1                    ***0***     
+    103             1                          3     
+    106             1                          2     
+    108             1                    ***0***     
+    110             1                          1     
+    115             1                          1     
+    118             1                    ***0***     
+    123             1                          3     
+    126             1                          2     
+    128             1                    ***0***     
+    130             1                    ***0***     
+    134             1                          1     
+    137             1                    ***0***     
+    146             1                          3     
+    148             1                          2     
+    150             1                          1     
+    154             1                          3     
+    156             1                          3     
+    157             1                          3     
+    158             1                          3     
+    159             1                          3     
+    160             1                          3     
+    161             1                          3     
+    162             1                          3     
+    163             1                          3     
+    169             1                    ***0***     
     170             1                    ***0***     
-    171             1                    ***0***     
-    172             1                    ***0***     
-    173             1                    ***0***     
+    174             1                    ***0***     
     175             1                    ***0***     
-    176             1                    ***0***     
-    178             1                    ***0***     
     180             1                    ***0***     
-    182             1                    ***0***     
+    181             1                    ***0***     
     186             1                    ***0***     
-    187             1                    ***0***     
-    189             1                    ***0***     
+    188             1                    ***0***     
+    190             1                    ***0***     
     191             1                    ***0***     
-    197             1                          3     
-    208             1                    ***0***     
+    195             1                    ***0***     
+    199             1                    ***0***     
+    204             1                    ***0***     
     209             1                    ***0***     
     210             1                    ***0***     
-    210             2                    ***0***     
     213             1                    ***0***     
-    216             1                    ***0***     
-    218             1                    ***0***     
-    230             1                    ***0***     
+    217             1                    ***0***     
+    221             1                          2     
+    225             1                          2     
+    235             1                    ***0***     
     236             1                    ***0***     
-    239             1                    ***0***     
-    242             1                    ***0***     
+    237             1                    ***0***     
+    237             2                    ***0***     
+    240             1                    ***0***     
+    243             1                    ***0***     
     245             1                    ***0***     
-    248             1                    ***0***     
-    251             1                    ***0***     
-    254             1                    ***0***     
     257             1                    ***0***     
-    260             1                    ***0***     
+    263             1                    ***0***     
+    266             1                    ***0***     
+    269             1                    ***0***     
     272             1                    ***0***     
-    276             1                    ***0***     
-    279             1                    ***0***     
-    282             1                    ***0***     
-    285             1                    ***0***     
-    288             1                    ***0***     
-    291             1                    ***0***     
-    294             1                    ***0***     
-    297             1                    ***0***     
-    300             1                    ***0***     
+    275             1                    ***0***     
+    278             1                    ***0***     
+    281             1                    ***0***     
+    284             1                    ***0***     
+    287             1                    ***0***     
+    299             1                    ***0***     
+    303             1                    ***0***     
+    306             1                    ***0***     
+    309             1                    ***0***     
+    312             1                    ***0***     
+    315             1                    ***0***     
+    318             1                    ***0***     
+    321             1                    ***0***     
+    324             1                    ***0***     
+    327             1                    ***0***     
 Toggle Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Toggles                        138         2       136     1.44%
+    Toggles                        128         2       126     1.56%
 
 ================================Toggle Details================================
 
@@ -12795,12 +12779,8 @@ Toggle Coverage for instance /KnightsTour_tb_moveW1/iDUT/iTL --
                                               ---------------------------------------------------------------
                                            back_up           0           0                                0.00 
                                               calc           0           0                                0.00 
-                                     decr_move_num           0           0                                0.00 
                                               done           0           0                                0.00 
-                                     incr_move_num           0           0                                0.00 
                                         init_board           0           0                                0.00 
-                                     init_move_try           0           0                                0.00 
-                                              last           0           0                                0.00 
                                        making_move           0           0                                0.00 
                                      move_num[0-4]           0           0                                0.00 
                                      move_try[0-7]           0           0                                0.00 
@@ -12816,17 +12796,16 @@ Toggle Coverage for instance /KnightsTour_tb_moveW1/iDUT/iTL --
                                                                   POSSIBLE           0        0.00 
                                                                  MAKE_MOVE           0        0.00 
                                                                     BACKUP           0        0.00 
-                                        update_pos           0           0                                0.00 
                                    update_position           0           0                                0.00 
                                            x[0-31]           0           0                                0.00 
                                            xx[0-2]           0           0                                0.00 
                                            yy[0-2]           0           0                                0.00 
 
-Total Node Count     =         74 
+Total Node Count     =         69 
 Toggled Node Count   =          2 
-Untoggled Node Count =         72 
+Untoggled Node Count =         67 
 
-Toggle Coverage      =       1.44% (2 of 138 bins)
+Toggle Coverage      =       1.56% (2 of 128 bins)
 
 =================================================================================
 === Instance: /KnightsTour_tb_moveW1/iDUT/iTC
@@ -12865,7 +12844,7 @@ Branch totals: 1 hit of 2 branches = 50.00%
 Branch totals: 0 hits of 2 branches = 0.00%
 
 ------------------------------------CASE Branch------------------------------------
-    86                                         2     Count coming in to CASE
+    86                                         1     Count coming in to CASE
     87              1                    ***0***     
     92              1                    ***0***     
     97              1                    ***0***     
@@ -12874,7 +12853,7 @@ Branch totals: 0 hits of 2 branches = 0.00%
     112             1                    ***0***     
     117             1                    ***0***     
     122             1                    ***0***     
-    127             1                          2     
+    127             1                          1     
 Branch totals: 1 hit of 9 branches = 11.11%
 
 ------------------------------------IF Branch------------------------------------
@@ -13004,7 +12983,7 @@ Statement Coverage for instance /KnightsTour_tb_moveW1/iDUT/iTC --
     Line         Item                      Count     Source 
     ----         ----                      -----     ------ 
   File ../src/TourCmd.sv
-    42              1                          2     
+    42              1                          1     
     56              1                          3     
     59              1                          2     
     61              1                    ***0***     
@@ -13013,7 +12992,7 @@ Statement Coverage for instance /KnightsTour_tb_moveW1/iDUT/iTC --
     72              1                          2     
     75              1                    ***0***     
     77              1                    ***0***     
-    85              1                          2     
+    85              1                          1     
     88              1                    ***0***     
     89              1                    ***0***     
     93              1                    ***0***     
@@ -13030,8 +13009,8 @@ Statement Coverage for instance /KnightsTour_tb_moveW1/iDUT/iTC --
     119             1                    ***0***     
     123             1                    ***0***     
     124             1                    ***0***     
-    128             1                          2     
-    129             1                          2     
+    128             1                          1     
+    129             1                          1     
     135             1                          2     
     137             1                         41     
     146             1                          3     
@@ -17910,7 +17889,7 @@ Toggle Coverage      =      45.36% (88 of 194 bins)
 Branch Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Branches                        72        20        52    27.77%
+    Branches                        71        19        52    26.76%
 
 ================================Branch Details================================
 
@@ -17920,146 +17899,145 @@ Branch Coverage for instance /KnightsTour_tb_moveE2FF/iDUT/iTL
     ----         ----                      -----     ------ 
   File ../src/TourLogic.sv
 ------------------------------------IF Branch------------------------------------
-    29                                        41     Count coming in to IF
-    29              1                          2     
-    31              1                    ***0***     
-    33              1                    ***0***     
-    35              1                    ***0***     
-    37              1                    ***0***     
+    30                                        41     Count coming in to IF
+    30              1                          2     
+    40              1                    ***0***     
+    48              1                    ***0***     
+    52              1                    ***0***     
+    56              1                    ***0***     
                                               39     All False Count
 Branch totals: 2 hits of 6 branches = 33.33%
 
 ------------------------------------IF Branch------------------------------------
-    43                                        41     Count coming in to IF
-    43              1                          2     
-    45              1                    ***0***     
-    47              1                    ***0***     
-    49              1                    ***0***     
-                                              39     All False Count
-Branch totals: 2 hits of 5 branches = 40.00%
-
-------------------------------------IF Branch------------------------------------
-    55                                        41     Count coming in to IF
-    55              1                          2     
-    57              1                    ***0***     
-    59              1                    ***0***     
-    61              1                    ***0***     
-                                              39     All False Count
-Branch totals: 2 hits of 5 branches = 40.00%
-
-------------------------------------IF Branch------------------------------------
-    67                                         3     Count coming in to IF
-    67              1                          2     
+    65                                        41     Count coming in to IF
+    65              1                          2     
+    67              1                    ***0***     
     69              1                    ***0***     
     71              1                    ***0***     
-    73              1                    ***0***     
-                                               1     All False Count
+                                              39     All False Count
 Branch totals: 2 hits of 5 branches = 40.00%
 
 ------------------------------------IF Branch------------------------------------
-    80                                         3     Count coming in to IF
-    80              1                          2     
+    78                                        41     Count coming in to IF
+    78              1                          2     
+    80              1                    ***0***     
     82              1                    ***0***     
-    84              1                          1     
-Branch totals: 2 hits of 3 branches = 66.66%
+    84              1                    ***0***     
+                                              39     All False Count
+Branch totals: 2 hits of 5 branches = 40.00%
 
 ------------------------------------IF Branch------------------------------------
     91                                         3     Count coming in to IF
     91              1                          2     
     93              1                    ***0***     
+    95              1                    ***0***     
+    97              1                    ***0***     
                                                1     All False Count
+Branch totals: 2 hits of 5 branches = 40.00%
+
+------------------------------------IF Branch------------------------------------
+    105                                        3     Count coming in to IF
+    105             1                          2     
+    107             1                    ***0***     
+    109             1                          1     
 Branch totals: 2 hits of 3 branches = 66.66%
 
 ------------------------------------IF Branch------------------------------------
-    100                                        3     Count coming in to IF
-    100             1                          2     
-    102             1                    ***0***     
-    104             1                    ***0***     
+    117                                        1     Count coming in to IF
+    117             1                    ***0***     
+                                               1     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    125                                        3     Count coming in to IF
+    125             1                          2     
+    127             1                    ***0***     
+    129             1                    ***0***     
                                                1     All False Count
 Branch totals: 2 hits of 4 branches = 50.00%
 
 ------------------------------------IF Branch------------------------------------
-    110                                        3     Count coming in to IF
-    110             1                          2     
-    112             1                    ***0***     
+    136                                        1     Count coming in to IF
+    136             1                    ***0***     
                                                1     All False Count
-Branch totals: 2 hits of 3 branches = 66.66%
-
-------------------------------------IF Branch------------------------------------
-    122                                        3     Count coming in to IF
-    122             1                          2     
-    124             1                          1     
-Branch totals: 2 hits of 2 branches = 100.00%
-
-------------------------------------CASE Branch------------------------------------
-    145                                        3     Count coming in to CASE
-    148             1                          3     
-    155             1                    ***0***     
-    161             1                    ***0***     
-    167             1                    ***0***     
-    184             1                    ***0***     
-Branch totals: 1 hit of 5 branches = 20.00%
-
-------------------------------------IF Branch------------------------------------
-    149                                        3     Count coming in to IF
-    149             1                    ***0***     
-                                               3     All False Count
 Branch totals: 1 hit of 2 branches = 50.00%
 
 ------------------------------------IF Branch------------------------------------
-    169                                  ***0***     Count coming in to IF
-    169             1                    ***0***     
+    147                                        3     Count coming in to IF
+    147             1                          2     
+    149             1                          1     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    164                                        3     Count coming in to CASE
+    166             1                          1     
+    173             1                    ***0***     
     179             1                    ***0***     
-    181             1                    ***0***     
+    184             1                    ***0***     
+    208             1                    ***0***     
+    220             1                          2     
+Branch totals: 2 hits of 6 branches = 33.33%
+
+------------------------------------IF Branch------------------------------------
+    167                                        1     Count coming in to IF
+    167             1                    ***0***     
+                                               1     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    187                                  ***0***     Count coming in to IF
+    187             1                    ***0***     
+    198             1                    ***0***     
+    202             1                    ***0***     
 Branch totals: 0 hits of 3 branches = 0.00%
 
 ------------------------------------IF Branch------------------------------------
-    174                                  ***0***     Count coming in to IF
-    174             1                    ***0***     
-    177             1                    ***0***     
-Branch totals: 0 hits of 2 branches = 0.00%
-
-------------------------------------IF Branch------------------------------------
-    188                                  ***0***     Count coming in to IF
-    188             1                    ***0***     
-    190             1                    ***0***     
+    189                                  ***0***     Count coming in to IF
+    189             1                    ***0***     
+    193             1                    ***0***     
 Branch totals: 0 hits of 2 branches = 0.00%
 
 ------------------------------------IF Branch------------------------------------
     211                                  ***0***     Count coming in to IF
     211             1                    ***0***     
+    215             1                    ***0***     
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    238                                  ***0***     Count coming in to IF
+    238             1                    ***0***     
                                          ***0***     All False Count
 Branch totals: 0 hits of 2 branches = 0.00%
 
 ------------------------------------IF Branch------------------------------------
-    212                                  ***0***     Count coming in to IF
-    212             1                    ***0***     
+    239                                  ***0***     Count coming in to IF
+    239             1                    ***0***     
                                          ***0***     All False Count
 Branch totals: 0 hits of 2 branches = 0.00%
 
 ------------------------------------CASE Branch------------------------------------
-    234                                  ***0***     Count coming in to CASE
-    235             1                    ***0***     
-    238             1                    ***0***     
-    241             1                    ***0***     
-    244             1                    ***0***     
-    247             1                    ***0***     
-    250             1                    ***0***     
-    253             1                    ***0***     
-    256             1                    ***0***     
+    261                                  ***0***     Count coming in to CASE
+    262             1                    ***0***     
+    265             1                    ***0***     
+    268             1                    ***0***     
+    271             1                    ***0***     
+    274             1                    ***0***     
+    277             1                    ***0***     
+    280             1                    ***0***     
+    283             1                    ***0***     
                                          ***0***     All False Count
 Branch totals: 0 hits of 9 branches = 0.00%
 
 ------------------------------------CASE Branch------------------------------------
-    274                                  ***0***     Count coming in to CASE
-    275             1                    ***0***     
-    278             1                    ***0***     
-    281             1                    ***0***     
-    284             1                    ***0***     
-    287             1                    ***0***     
-    290             1                    ***0***     
-    293             1                    ***0***     
-    296             1                    ***0***     
+    301                                  ***0***     Count coming in to CASE
+    302             1                    ***0***     
+    305             1                    ***0***     
+    308             1                    ***0***     
+    311             1                    ***0***     
+    314             1                    ***0***     
+    317             1                    ***0***     
+    320             1                    ***0***     
+    323             1                    ***0***     
                                          ***0***     All False Count
 Branch totals: 0 hits of 9 branches = 0.00%
 
@@ -18075,7 +18053,7 @@ Condition Coverage for instance /KnightsTour_tb_moveE2FF/iDUT/iTL --
 
   File ../src/TourLogic.sv
 ----------------Focused Condition View-------------------
-Line       174 Item    1  (move_num == 23)
+Line       189 Item    1  (move_num == 23)
 Condition totals: 0 of 1 input term covered = 0.00%
 
         Input Term   Covered  Reason for no coverage   Hint
@@ -18088,7 +18066,7 @@ Condition totals: 0 of 1 input term covered = 0.00%
   Row   2:    ***0***  (move_num == 23)_1    -                             
 
 ----------------Focused Condition View-------------------
-Line       179 Item    1  (move_try != 128)
+Line       198 Item    1  (move_try != 128)
 Condition totals: 0 of 1 input term covered = 0.00%
 
          Input Term   Covered  Reason for no coverage   Hint
@@ -18101,7 +18079,7 @@ Condition totals: 0 of 1 input term covered = 0.00%
   Row   2:    ***0***  (move_try != 128)_1   -                             
 
 ----------------Focused Condition View-------------------
-Line       188 Item    1  (last_move[move_num-1] == 128)
+Line       211 Item    1  (last_move[move_num-1] == 128)
 Condition totals: 0 of 1 input term covered = 0.00%
 
                       Input Term   Covered  Reason for no coverage   Hint
@@ -18114,7 +18092,7 @@ Condition totals: 0 of 1 input term covered = 0.00%
   Row   2:    ***0***  (last_move[move_num-1] == 128)_1  -                             
 
 ----------------Focused Condition View-------------------
-Line       211 Item    1  (((xpos + off_x(try)) < 5) && ((ypos + off_y(try)) < 5))
+Line       238 Item    1  (((xpos + off_x(try)) < 5) && ((ypos + off_y(try)) < 5))
 Condition totals: 0 of 2 input terms covered = 0.00%
 
                  Input Term   Covered  Reason for no coverage   Hint
@@ -18133,7 +18111,7 @@ Condition totals: 0 of 2 input terms covered = 0.00%
 Statement Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Statements                     100        35        65    35.00%
+    Statements                      99        33        66    33.33%
 
 ================================Statement Details================================
 
@@ -18143,109 +18121,108 @@ Statement Coverage for instance /KnightsTour_tb_moveE2FF/iDUT/iTL --
     ----         ----                      -----     ------ 
   File ../src/TourLogic.sv
     28              1                         41     
-    30              1                          2     
-    32              1                    ***0***     
-    34              1                    ***0***     
-    36              1                    ***0***     
-    38              1                    ***0***     
-    42              1                         41     
-    44              1                          2     
-    46              1                    ***0***     
-    48              1                    ***0***     
+    33              1                          2     
+    33              2                         10     
+    34              1                         10     
+    34              2                         50     
+    35              1                         50     
+    42              1                    ***0***     
+    42              2                    ***0***     
+    43              1                    ***0***     
+    43              2                    ***0***     
+    44              1                    ***0***     
     50              1                    ***0***     
-    54              1                         41     
-    56              1                          2     
-    58              1                    ***0***     
-    60              1                    ***0***     
-    62              1                    ***0***     
-    66              1                          3     
-    68              1                          2     
+    54              1                    ***0***     
+    57              1                    ***0***     
+    63              1                         41     
+    66              1                          2     
+    68              1                    ***0***     
     70              1                    ***0***     
     72              1                    ***0***     
-    74              1                    ***0***     
-    79              1                          3     
-    81              1                          2     
+    76              1                         41     
+    79              1                          2     
+    81              1                    ***0***     
     83              1                    ***0***     
-    85              1                          1     
-    90              1                          3     
+    85              1                    ***0***     
+    89              1                          3     
     92              1                          2     
     94              1                    ***0***     
-    99              1                          3     
-    101             1                          2     
-    103             1                    ***0***     
-    105             1                    ***0***     
-    109             1                          3     
-    111             1                          2     
-    113             1                    ***0***     
-    121             1                          3     
-    123             1                          2     
-    125             1                          1     
-    129             1                          3     
-    131             1                          3     
-    132             1                          3     
-    133             1                          3     
-    134             1                          3     
-    135             1                          3     
-    136             1                          3     
-    137             1                          3     
-    138             1                          3     
-    139             1                          3     
-    140             1                          3     
-    141             1                          3     
-    142             1                          3     
-    143             1                          3     
-    151             1                    ***0***     
-    152             1                    ***0***     
-    156             1                    ***0***     
-    157             1                    ***0***     
-    162             1                    ***0***     
-    163             1                    ***0***     
-    164             1                    ***0***     
+    96              1                    ***0***     
+    98              1                    ***0***     
+    103             1                          3     
+    106             1                          2     
+    108             1                    ***0***     
+    110             1                          1     
+    115             1                          1     
+    118             1                    ***0***     
+    123             1                          3     
+    126             1                          2     
+    128             1                    ***0***     
+    130             1                    ***0***     
+    134             1                          1     
+    137             1                    ***0***     
+    146             1                          3     
+    148             1                          2     
+    150             1                          1     
+    154             1                          3     
+    156             1                          3     
+    157             1                          3     
+    158             1                          3     
+    159             1                          3     
+    160             1                          3     
+    161             1                          3     
+    162             1                          3     
+    163             1                          3     
+    169             1                    ***0***     
     170             1                    ***0***     
-    171             1                    ***0***     
-    172             1                    ***0***     
-    173             1                    ***0***     
+    174             1                    ***0***     
     175             1                    ***0***     
-    176             1                    ***0***     
-    178             1                    ***0***     
     180             1                    ***0***     
-    182             1                    ***0***     
+    181             1                    ***0***     
     186             1                    ***0***     
-    187             1                    ***0***     
-    189             1                    ***0***     
+    188             1                    ***0***     
+    190             1                    ***0***     
     191             1                    ***0***     
-    197             1                          3     
-    208             1                    ***0***     
+    195             1                    ***0***     
+    199             1                    ***0***     
+    204             1                    ***0***     
     209             1                    ***0***     
     210             1                    ***0***     
-    210             2                    ***0***     
     213             1                    ***0***     
-    216             1                    ***0***     
-    218             1                    ***0***     
-    230             1                    ***0***     
+    217             1                    ***0***     
+    221             1                          2     
+    225             1                          2     
+    235             1                    ***0***     
     236             1                    ***0***     
-    239             1                    ***0***     
-    242             1                    ***0***     
+    237             1                    ***0***     
+    237             2                    ***0***     
+    240             1                    ***0***     
+    243             1                    ***0***     
     245             1                    ***0***     
-    248             1                    ***0***     
-    251             1                    ***0***     
-    254             1                    ***0***     
     257             1                    ***0***     
-    260             1                    ***0***     
+    263             1                    ***0***     
+    266             1                    ***0***     
+    269             1                    ***0***     
     272             1                    ***0***     
-    276             1                    ***0***     
-    279             1                    ***0***     
-    282             1                    ***0***     
-    285             1                    ***0***     
-    288             1                    ***0***     
-    291             1                    ***0***     
-    294             1                    ***0***     
-    297             1                    ***0***     
-    300             1                    ***0***     
+    275             1                    ***0***     
+    278             1                    ***0***     
+    281             1                    ***0***     
+    284             1                    ***0***     
+    287             1                    ***0***     
+    299             1                    ***0***     
+    303             1                    ***0***     
+    306             1                    ***0***     
+    309             1                    ***0***     
+    312             1                    ***0***     
+    315             1                    ***0***     
+    318             1                    ***0***     
+    321             1                    ***0***     
+    324             1                    ***0***     
+    327             1                    ***0***     
 Toggle Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Toggles                        138         2       136     1.44%
+    Toggles                        128         2       126     1.56%
 
 ================================Toggle Details================================
 
@@ -18255,12 +18232,8 @@ Toggle Coverage for instance /KnightsTour_tb_moveE2FF/iDUT/iTL --
                                               ---------------------------------------------------------------
                                            back_up           0           0                                0.00 
                                               calc           0           0                                0.00 
-                                     decr_move_num           0           0                                0.00 
                                               done           0           0                                0.00 
-                                     incr_move_num           0           0                                0.00 
                                         init_board           0           0                                0.00 
-                                     init_move_try           0           0                                0.00 
-                                              last           0           0                                0.00 
                                        making_move           0           0                                0.00 
                                      move_num[0-4]           0           0                                0.00 
                                      move_try[0-7]           0           0                                0.00 
@@ -18276,17 +18249,16 @@ Toggle Coverage for instance /KnightsTour_tb_moveE2FF/iDUT/iTL --
                                                                   POSSIBLE           0        0.00 
                                                                  MAKE_MOVE           0        0.00 
                                                                     BACKUP           0        0.00 
-                                        update_pos           0           0                                0.00 
                                    update_position           0           0                                0.00 
                                            x[0-31]           0           0                                0.00 
                                            xx[0-2]           0           0                                0.00 
                                            yy[0-2]           0           0                                0.00 
 
-Total Node Count     =         74 
+Total Node Count     =         69 
 Toggled Node Count   =          2 
-Untoggled Node Count =         72 
+Untoggled Node Count =         67 
 
-Toggle Coverage      =       1.44% (2 of 138 bins)
+Toggle Coverage      =       1.56% (2 of 128 bins)
 
 =================================================================================
 === Instance: /KnightsTour_tb_moveE2FF/iDUT/iTC
@@ -18325,7 +18297,7 @@ Branch totals: 1 hit of 2 branches = 50.00%
 Branch totals: 0 hits of 2 branches = 0.00%
 
 ------------------------------------CASE Branch------------------------------------
-    86                                         2     Count coming in to CASE
+    86                                         1     Count coming in to CASE
     87              1                    ***0***     
     92              1                    ***0***     
     97              1                    ***0***     
@@ -18334,7 +18306,7 @@ Branch totals: 0 hits of 2 branches = 0.00%
     112             1                    ***0***     
     117             1                    ***0***     
     122             1                    ***0***     
-    127             1                          2     
+    127             1                          1     
 Branch totals: 1 hit of 9 branches = 11.11%
 
 ------------------------------------IF Branch------------------------------------
@@ -18464,7 +18436,7 @@ Statement Coverage for instance /KnightsTour_tb_moveE2FF/iDUT/iTC --
     Line         Item                      Count     Source 
     ----         ----                      -----     ------ 
   File ../src/TourCmd.sv
-    42              1                          2     
+    42              1                          1     
     56              1                          3     
     59              1                          2     
     61              1                    ***0***     
@@ -18473,7 +18445,7 @@ Statement Coverage for instance /KnightsTour_tb_moveE2FF/iDUT/iTC --
     72              1                          2     
     75              1                    ***0***     
     77              1                    ***0***     
-    85              1                          2     
+    85              1                          1     
     88              1                    ***0***     
     89              1                    ***0***     
     93              1                    ***0***     
@@ -18490,8 +18462,8 @@ Statement Coverage for instance /KnightsTour_tb_moveE2FF/iDUT/iTC --
     119             1                    ***0***     
     123             1                    ***0***     
     124             1                    ***0***     
-    128             1                          2     
-    129             1                          2     
+    128             1                          1     
+    129             1                          1     
     135             1                          2     
     137             1                         41     
     146             1                          3     
@@ -23306,7 +23278,7 @@ Toggle Coverage      =      15.97% (31 of 194 bins)
 Branch Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Branches                        72        70         2    97.22%
+    Branches                        71        69         2    97.18%
 
 ================================Branch Details================================
 
@@ -23316,146 +23288,145 @@ Branch Coverage for instance /KnightsTour_tb_tour_chk/iDUT/iTL
     ----         ----                      -----     ------ 
   File ../src/TourLogic.sv
 ------------------------------------IF Branch------------------------------------
-    29                                     64062     Count coming in to IF
-    29              1                          2     
-    31              1                          1     
-    33              1                          1     
-    35              1                       6504     
-    37              1                       6481     
+    30                                     64062     Count coming in to IF
+    30              1                          2     
+    40              1                          1     
+    48              1                          1     
+    52              1                       6504     
+    56              1                       6481     
                                            51073     All False Count
 Branch totals: 6 hits of 6 branches = 100.00%
 
 ------------------------------------IF Branch------------------------------------
-    43                                     64061     Count coming in to IF
-    43              1                          2     
-    45              1                          1     
-    47              1                       6504     
-    49              1                       6481     
+    65                                     64061     Count coming in to IF
+    65              1                          2     
+    67              1                          1     
+    69              1                       6504     
+    71              1                       6481     
                                            51073     All False Count
 Branch totals: 5 hits of 5 branches = 100.00%
 
 ------------------------------------IF Branch------------------------------------
-    55                                     64061     Count coming in to IF
-    55              1                          2     
-    57              1                          1     
-    59              1                       6504     
-    61              1                       6481     
+    78                                     64061     Count coming in to IF
+    78              1                          2     
+    80              1                          1     
+    82              1                       6504     
+    84              1                       6481     
                                            51073     All False Count
 Branch totals: 5 hits of 5 branches = 100.00%
 
 ------------------------------------IF Branch------------------------------------
-    67                                     64944     Count coming in to IF
-    67              1                          2     
-    69              1                       6505     
-    71              1                      39874     
-    73              1                       6481     
+    91                                     64944     Count coming in to IF
+    91              1                          2     
+    93              1                       6505     
+    95              1                      39874     
+    97              1                       6481     
                                            12082     All False Count
 Branch totals: 5 hits of 5 branches = 100.00%
 
 ------------------------------------IF Branch------------------------------------
-    80                                     13011     Count coming in to IF
-    80              1                          2     
-    82              1                       6504     
-    84              1                       6505     
+    105                                    13011     Count coming in to IF
+    105             1                          2     
+    107             1                       6504     
+    109             1                       6505     
 Branch totals: 3 hits of 3 branches = 100.00%
 
 ------------------------------------IF Branch------------------------------------
-    91                                     19494     Count coming in to IF
-    91              1                          2     
-    93              1                       6505     
+    117                                    19492     Count coming in to IF
+    117             1                       6505     
                                            12987     All False Count
-Branch totals: 3 hits of 3 branches = 100.00%
+Branch totals: 2 hits of 2 branches = 100.00%
 
 ------------------------------------IF Branch------------------------------------
-    100                                    24245     Count coming in to IF
-    100             1                          2     
-    102             1                       6504     
-    104             1                       6481     
+    125                                    24245     Count coming in to IF
+    125             1                          2     
+    127             1                       6504     
+    129             1                       6481     
                                            11258     All False Count
 Branch totals: 4 hits of 4 branches = 100.00%
 
 ------------------------------------IF Branch------------------------------------
-    110                                    58444     Count coming in to IF
-    110             1                          2     
-    112             1                       6504     
+    136                                    58442     Count coming in to IF
+    136             1                       6504     
                                            51938     All False Count
-Branch totals: 3 hits of 3 branches = 100.00%
+Branch totals: 2 hits of 2 branches = 100.00%
 
 ------------------------------------IF Branch------------------------------------
-    122                                    24168     Count coming in to IF
-    122             1                          2     
-    124             1                      24166     
+    147                                    24168     Count coming in to IF
+    147             1                          2     
+    149             1                      24166     
 Branch totals: 2 hits of 2 branches = 100.00%
 
 ------------------------------------CASE Branch------------------------------------
-    145                                    64948     Count coming in to CASE
-    148             1                          4     
-    155             1                          2     
-    161             1                       6505     
-    167             1                      51956     
-    184             1                       6481     
-Branch totals: 5 hits of 5 branches = 100.00%
+    164                                    64948     Count coming in to CASE
+    166             1                          2     
+    173             1                          2     
+    179             1                       6505     
+    184             1                      51956     
+    208             1                       6481     
+    220             1                          2     
+Branch totals: 6 hits of 6 branches = 100.00%
 
 ------------------------------------IF Branch------------------------------------
-    149                                        4     Count coming in to IF
-    149             1                          1     
-                                               3     All False Count
+    167                                        2     Count coming in to IF
+    167             1                          1     
+                                               1     All False Count
 Branch totals: 2 hits of 2 branches = 100.00%
 
 ------------------------------------IF Branch------------------------------------
-    169                                    51956     Count coming in to IF
-    169             1                       6505     
-    179             1                      39874     
-    181             1                       5577     
+    187                                    51956     Count coming in to IF
+    187             1                       6505     
+    198             1                      39874     
+    202             1                       5577     
 Branch totals: 3 hits of 3 branches = 100.00%
 
 ------------------------------------IF Branch------------------------------------
-    174                                     6505     Count coming in to IF
-    174             1                          1     
-    177             1                       6504     
+    189                                     6505     Count coming in to IF
+    189             1                          1     
+    193             1                       6504     
 Branch totals: 2 hits of 2 branches = 100.00%
 
 ------------------------------------IF Branch------------------------------------
-    188                                     6481     Count coming in to IF
-    188             1                        904     
-    190             1                       5577     
+    211                                     6481     Count coming in to IF
+    211             1                        904     
+    215             1                       5577     
 Branch totals: 2 hits of 2 branches = 100.00%
 
 ------------------------------------IF Branch------------------------------------
-    211                                    52040     Count coming in to IF
-    211             1                      22469     
+    238                                    52040     Count coming in to IF
+    238             1                      22469     
                                            29571     All False Count
 Branch totals: 2 hits of 2 branches = 100.00%
 
 ------------------------------------IF Branch------------------------------------
-    212                                    22469     Count coming in to IF
-    212             1                       6525     
+    239                                    22469     Count coming in to IF
+    239             1                       6525     
                                            15944     All False Count
 Branch totals: 2 hits of 2 branches = 100.00%
 
 ------------------------------------CASE Branch------------------------------------
-    234                                    93998     Count coming in to CASE
-    235             1                      12505     
-    238             1                      11514     
-    241             1                      11007     
-    244             1                      11933     
-    247             1                      11869     
-    250             1                      11634     
-    253             1                      11589     
-    256             1                      11947     
+    261                                    93998     Count coming in to CASE
+    262             1                      12505     
+    265             1                      11514     
+    268             1                      11007     
+    271             1                      11933     
+    274             1                      11869     
+    277             1                      11634     
+    280             1                      11589     
+    283             1                      11947     
                                          ***0***     All False Count
 Branch totals: 8 hits of 9 branches = 88.88%
 
 ------------------------------------CASE Branch------------------------------------
-    274                                    76336     Count coming in to CASE
-    275             1                      10973     
-    278             1                       9775     
-    281             1                       8638     
-    284             1                       9564     
-    287             1                      10337     
-    290             1                       9895     
-    293             1                       8398     
-    296             1                       8756     
+    301                                    76336     Count coming in to CASE
+    302             1                      10973     
+    305             1                       9775     
+    308             1                       8638     
+    311             1                       9564     
+    314             1                      10337     
+    317             1                       9895     
+    320             1                       8398     
+    323             1                       8756     
                                          ***0***     All False Count
 Branch totals: 8 hits of 9 branches = 88.88%
 
@@ -23471,26 +23442,26 @@ Condition Coverage for instance /KnightsTour_tb_tour_chk/iDUT/iTL --
 
   File ../src/TourLogic.sv
 ----------------Focused Condition View-------------------
-Line       174 Item    1  (move_num == 23)
+Line       189 Item    1  (move_num == 23)
 Condition totals: 1 of 1 input term covered = 100.00%
 
 ----------------Focused Condition View-------------------
-Line       179 Item    1  (move_try != 128)
+Line       198 Item    1  (move_try != 128)
 Condition totals: 1 of 1 input term covered = 100.00%
 
 ----------------Focused Condition View-------------------
-Line       188 Item    1  (last_move[move_num-1] == 128)
+Line       211 Item    1  (last_move[move_num-1] == 128)
 Condition totals: 1 of 1 input term covered = 100.00%
 
 ----------------Focused Condition View-------------------
-Line       211 Item    1  (((xpos + off_x(try)) < 5) && ((ypos + off_y(try)) < 5))
+Line       238 Item    1  (((xpos + off_x(try)) < 5) && ((ypos + off_y(try)) < 5))
 Condition totals: 2 of 2 input terms covered = 100.00%
 
 
 Statement Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Statements                     100       100         0   100.00%
+    Statements                      99        99         0   100.00%
 
 ================================Statement Details================================
 
@@ -23500,109 +23471,108 @@ Statement Coverage for instance /KnightsTour_tb_tour_chk/iDUT/iTL --
     ----         ----                      -----     ------ 
   File ../src/TourLogic.sv
     28              1                      64062     
-    30              1                          2     
-    32              1                          1     
-    34              1                          1     
-    36              1                       6504     
-    38              1                       6481     
-    42              1                      64061     
-    44              1                          2     
-    46              1                          1     
-    48              1                       6504     
-    50              1                       6481     
-    54              1                      64061     
-    56              1                          2     
-    58              1                          1     
-    60              1                       6504     
-    62              1                       6481     
-    66              1                      64944     
-    68              1                          2     
-    70              1                       6505     
-    72              1                      39874     
-    74              1                       6481     
-    79              1                      13011     
-    81              1                          2     
+    33              1                          2     
+    33              2                         10     
+    34              1                         10     
+    34              2                         50     
+    35              1                         50     
+    42              1                          1     
+    42              2                          5     
+    43              1                          5     
+    43              2                         25     
+    44              1                         25     
+    50              1                          1     
+    54              1                       6504     
+    57              1                       6481     
+    63              1                      64061     
+    66              1                          2     
+    68              1                          1     
+    70              1                       6504     
+    72              1                       6481     
+    76              1                      64061     
+    79              1                          2     
+    81              1                          1     
     83              1                       6504     
-    85              1                       6505     
-    90              1                      19494     
+    85              1                       6481     
+    89              1                      64944     
     92              1                          2     
     94              1                       6505     
-    99              1                      24245     
-    101             1                          2     
-    103             1                       6504     
-    105             1                       6481     
-    109             1                      58444     
-    111             1                          2     
-    113             1                       6504     
-    121             1                      24168     
-    123             1                          2     
-    125             1                      24166     
-    129             1                      64948     
-    131             1                      64948     
-    132             1                      64948     
-    133             1                      64948     
-    134             1                      64948     
-    135             1                      64948     
-    136             1                      64948     
-    137             1                      64948     
-    138             1                      64948     
-    139             1                      64948     
-    140             1                      64948     
-    141             1                      64948     
-    142             1                      64948     
-    143             1                      64948     
-    151             1                          1     
-    152             1                          1     
-    156             1                          2     
-    157             1                          2     
-    162             1                       6505     
-    163             1                       6505     
-    164             1                       6505     
-    170             1                       6505     
-    171             1                       6505     
-    172             1                       6505     
-    173             1                       6505     
-    175             1                          1     
-    176             1                          1     
-    178             1                       6504     
-    180             1                      39874     
-    182             1                       5577     
-    186             1                       6481     
-    187             1                       6481     
-    189             1                        904     
-    191             1                       5577     
-    197             1                       6016     
-    208             1                       6505     
-    209             1                       6505     
-    210             1                       6505     
-    210             2                      52040     
-    213             1                       6525     
-    216             1                      52040     
-    218             1                       6505     
-    230             1                      93998     
-    236             1                      12505     
-    239             1                      11514     
-    242             1                      11007     
-    245             1                      11933     
-    248             1                      11869     
-    251             1                      11634     
-    254             1                      11589     
-    257             1                      11947     
-    260             1                      93998     
-    272             1                      76336     
-    276             1                      10973     
-    279             1                       9775     
-    282             1                       8638     
-    285             1                       9564     
-    288             1                      10337     
-    291             1                       9895     
-    294             1                       8398     
-    297             1                       8756     
-    300             1                      76336     
+    96              1                      39874     
+    98              1                       6481     
+    103             1                      13011     
+    106             1                          2     
+    108             1                       6504     
+    110             1                       6505     
+    115             1                      19492     
+    118             1                       6505     
+    123             1                      24245     
+    126             1                          2     
+    128             1                       6504     
+    130             1                       6481     
+    134             1                      58442     
+    137             1                       6504     
+    146             1                      24168     
+    148             1                          2     
+    150             1                      24166     
+    154             1                      64948     
+    156             1                      64948     
+    157             1                      64948     
+    158             1                      64948     
+    159             1                      64948     
+    160             1                      64948     
+    161             1                      64948     
+    162             1                      64948     
+    163             1                      64948     
+    169             1                          1     
+    170             1                          1     
+    174             1                          2     
+    175             1                          2     
+    180             1                       6505     
+    181             1                       6505     
+    186             1                      51956     
+    188             1                       6505     
+    190             1                          1     
+    191             1                          1     
+    195             1                       6504     
+    199             1                      39874     
+    204             1                       5577     
+    209             1                       6481     
+    210             1                       6481     
+    213             1                        904     
+    217             1                       5577     
+    221             1                          2     
+    225             1                       6015     
+    235             1                       6505     
+    236             1                       6505     
+    237             1                       6505     
+    237             2                      52040     
+    240             1                       6525     
+    243             1                      52040     
+    245             1                       6505     
+    257             1                      93998     
+    263             1                      12505     
+    266             1                      11514     
+    269             1                      11007     
+    272             1                      11933     
+    275             1                      11869     
+    278             1                      11634     
+    281             1                      11589     
+    284             1                      11947     
+    287             1                      93998     
+    299             1                      76336     
+    303             1                      10973     
+    306             1                       9775     
+    309             1                       8638     
+    312             1                       9564     
+    315             1                      10337     
+    318             1                       9895     
+    321             1                       8398     
+    324             1                       8756     
+    327             1                      76336     
 Toggle Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Toggles                        138        72        66    52.17%
+    Toggles                        128        62        66    48.43%
 
 ================================Toggle Details================================
 
@@ -23615,11 +23585,11 @@ Toggle Coverage for instance /KnightsTour_tb_tour_chk/iDUT/iTL --
                                              state               ENUM type       Value       Count 
                                            x[0-31]           0           0                                0.00 
 
-Total Node Count     =         74 
-Toggled Node Count   =         41 
+Total Node Count     =         69 
+Toggled Node Count   =         36 
 Untoggled Node Count =         33 
 
-Toggle Coverage      =      52.17% (72 of 138 bins)
+Toggle Coverage      =      48.43% (62 of 128 bins)
 
 =================================================================================
 === Instance: /KnightsTour_tb_tour_chk/iDUT/iTC
@@ -23658,7 +23628,7 @@ Branch totals: 1 hit of 2 branches = 50.00%
 Branch totals: 0 hits of 2 branches = 0.00%
 
 ------------------------------------CASE Branch------------------------------------
-    86                                         3     Count coming in to CASE
+    86                                         2     Count coming in to CASE
     87              1                          1     
     92              1                    ***0***     
     97              1                    ***0***     
@@ -23667,7 +23637,7 @@ Branch totals: 0 hits of 2 branches = 0.00%
     112             1                    ***0***     
     117             1                    ***0***     
     122             1                    ***0***     
-    127             1                          2     
+    127             1                          1     
 Branch totals: 2 hits of 9 branches = 22.22%
 
 ------------------------------------IF Branch------------------------------------
@@ -23797,7 +23767,7 @@ Statement Coverage for instance /KnightsTour_tb_tour_chk/iDUT/iTC --
     Line         Item                      Count     Source 
     ----         ----                      -----     ------ 
   File ../src/TourCmd.sv
-    42              1                          3     
+    42              1                          2     
     56              1                          3     
     59              1                          2     
     61              1                    ***0***     
@@ -23806,7 +23776,7 @@ Statement Coverage for instance /KnightsTour_tb_tour_chk/iDUT/iTC --
     72              1                          2     
     75              1                    ***0***     
     77              1                    ***0***     
-    85              1                          3     
+    85              1                          2     
     88              1                          1     
     89              1                          1     
     93              1                    ***0***     
@@ -23823,8 +23793,8 @@ Statement Coverage for instance /KnightsTour_tb_tour_chk/iDUT/iTC --
     119             1                    ***0***     
     123             1                    ***0***     
     124             1                    ***0***     
-    128             1                          2     
-    129             1                          2     
+    128             1                          1     
+    129             1                          1     
     135             1                          3     
     137             1                         43     
     146             1                          3     
@@ -25715,7 +25685,7 @@ Toggle Coverage      =       2.27% (5 of 220 bins)
 Toggle Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Toggles                        250       101       149    40.40%
+    Toggles                        250       100       150    40.00%
 
 ================================Toggle Details================================
 
@@ -25734,8 +25704,7 @@ Toggle Coverage for instance /KnightsTour_tb_tour_chk/iDUT --
                                         frwrd[0-9]           0           0                                0.00 
                                              lftIR           0           0                                0.00 
                                      lft_spd[0-10]           0           0                                0.00 
-                                           move[0]           0           1                               50.00 
-                                         move[1-7]           0           0                                0.00 
+                                         move[0-7]           0           0                                0.00 
                                             moving           0           0                                0.00 
                                       mv_indx[0-4]           0           0                                0.00 
                                          resp[0-7]           0           0                                0.00 
@@ -25749,7 +25718,7 @@ Total Node Count     =        125
 Toggled Node Count   =         48 
 Untoggled Node Count =         77 
 
-Toggle Coverage      =      40.40% (101 of 250 bins)
+Toggle Coverage      =      40.00% (100 of 250 bins)
 
 =================================================================================
 === Instance: /KnightsTour_tb_tour_chk/iRMT/iU_RCOM/iTX
@@ -28895,7 +28864,7 @@ Toggle Coverage      =      56.18% (109 of 194 bins)
 Branch Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Branches                        72        70         2    97.22%
+    Branches                        71        69         2    97.18%
 
 ================================Branch Details================================
 
@@ -28905,146 +28874,145 @@ Branch Coverage for instance /KnightsTour_tb_tour_move/iDUT/iTL
     ----         ----                      -----     ------ 
   File ../src/TourLogic.sv
 ------------------------------------IF Branch------------------------------------
-    29                                     64066     Count coming in to IF
-    29              1                          2     
-    31              1                          1     
-    33              1                          1     
-    35              1                       6505     
-    37              1                       6481     
+    30                                     64066     Count coming in to IF
+    30              1                          2     
+    40              1                          1     
+    48              1                          1     
+    52              1                       6505     
+    56              1                       6481     
                                            51076     All False Count
 Branch totals: 6 hits of 6 branches = 100.00%
 
 ------------------------------------IF Branch------------------------------------
-    43                                     64065     Count coming in to IF
-    43              1                          2     
-    45              1                          1     
-    47              1                       6505     
-    49              1                       6481     
-                                           51076     All False Count
-Branch totals: 5 hits of 5 branches = 100.00%
-
-------------------------------------IF Branch------------------------------------
-    55                                     64065     Count coming in to IF
-    55              1                          2     
-    57              1                          1     
-    59              1                       6505     
-    61              1                       6481     
-                                           51076     All False Count
-Branch totals: 5 hits of 5 branches = 100.00%
-
-------------------------------------IF Branch------------------------------------
-    67                                     64946     Count coming in to IF
-    67              1                          2     
+    65                                     64065     Count coming in to IF
+    65              1                          2     
+    67              1                          1     
     69              1                       6505     
-    71              1                      39874     
-    73              1                       6481     
+    71              1                       6481     
+                                           51076     All False Count
+Branch totals: 5 hits of 5 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    78                                     64065     Count coming in to IF
+    78              1                          2     
+    80              1                          1     
+    82              1                       6505     
+    84              1                       6481     
+                                           51076     All False Count
+Branch totals: 5 hits of 5 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    91                                     64946     Count coming in to IF
+    91              1                          2     
+    93              1                       6505     
+    95              1                      39874     
+    97              1                       6481     
                                            12084     All False Count
 Branch totals: 5 hits of 5 branches = 100.00%
 
 ------------------------------------IF Branch------------------------------------
-    80                                     13013     Count coming in to IF
-    80              1                          2     
-    82              1                       6505     
-    84              1                       6506     
+    105                                    13013     Count coming in to IF
+    105             1                          2     
+    107             1                       6505     
+    109             1                       6506     
 Branch totals: 3 hits of 3 branches = 100.00%
 
 ------------------------------------IF Branch------------------------------------
-    91                                     19495     Count coming in to IF
-    91              1                          2     
-    93              1                       6505     
+    117                                    19493     Count coming in to IF
+    117             1                       6505     
                                            12988     All False Count
-Branch totals: 3 hits of 3 branches = 100.00%
+Branch totals: 2 hits of 2 branches = 100.00%
 
 ------------------------------------IF Branch------------------------------------
-    100                                    24247     Count coming in to IF
-    100             1                          2     
-    102             1                       6505     
-    104             1                       6481     
+    125                                    24247     Count coming in to IF
+    125             1                          2     
+    127             1                       6505     
+    129             1                       6481     
                                            11259     All False Count
 Branch totals: 4 hits of 4 branches = 100.00%
 
 ------------------------------------IF Branch------------------------------------
-    110                                    58446     Count coming in to IF
-    110             1                          2     
-    112             1                       6505     
+    136                                    58444     Count coming in to IF
+    136             1                       6505     
                                            51939     All False Count
-Branch totals: 3 hits of 3 branches = 100.00%
+Branch totals: 2 hits of 2 branches = 100.00%
 
 ------------------------------------IF Branch------------------------------------
-    122                                    24169     Count coming in to IF
-    122             1                          2     
-    124             1                      24167     
+    147                                    24169     Count coming in to IF
+    147             1                          2     
+    149             1                      24167     
 Branch totals: 2 hits of 2 branches = 100.00%
 
 ------------------------------------CASE Branch------------------------------------
-    145                                    64949     Count coming in to CASE
-    148             1                          5     
-    155             1                          2     
-    161             1                       6505     
-    167             1                      51956     
-    184             1                       6481     
-Branch totals: 5 hits of 5 branches = 100.00%
+    164                                    64949     Count coming in to CASE
+    166             1                          3     
+    173             1                          2     
+    179             1                       6505     
+    184             1                      51956     
+    208             1                       6481     
+    220             1                          2     
+Branch totals: 6 hits of 6 branches = 100.00%
 
 ------------------------------------IF Branch------------------------------------
-    149                                        5     Count coming in to IF
-    149             1                          1     
-                                               4     All False Count
+    167                                        3     Count coming in to IF
+    167             1                          1     
+                                               2     All False Count
 Branch totals: 2 hits of 2 branches = 100.00%
 
 ------------------------------------IF Branch------------------------------------
-    169                                    51956     Count coming in to IF
-    169             1                       6505     
-    179             1                      39874     
-    181             1                       5577     
+    187                                    51956     Count coming in to IF
+    187             1                       6505     
+    198             1                      39874     
+    202             1                       5577     
 Branch totals: 3 hits of 3 branches = 100.00%
 
 ------------------------------------IF Branch------------------------------------
-    174                                     6505     Count coming in to IF
-    174             1                          1     
-    177             1                       6504     
+    189                                     6505     Count coming in to IF
+    189             1                          1     
+    193             1                       6504     
 Branch totals: 2 hits of 2 branches = 100.00%
 
 ------------------------------------IF Branch------------------------------------
-    188                                     6481     Count coming in to IF
-    188             1                        904     
-    190             1                       5577     
+    211                                     6481     Count coming in to IF
+    211             1                        904     
+    215             1                       5577     
 Branch totals: 2 hits of 2 branches = 100.00%
 
 ------------------------------------IF Branch------------------------------------
-    211                                    52040     Count coming in to IF
-    211             1                      22469     
+    238                                    52040     Count coming in to IF
+    238             1                      22469     
                                            29571     All False Count
 Branch totals: 2 hits of 2 branches = 100.00%
 
 ------------------------------------IF Branch------------------------------------
-    212                                    22469     Count coming in to IF
-    212             1                       6525     
+    239                                    22469     Count coming in to IF
+    239             1                       6525     
                                            15944     All False Count
 Branch totals: 2 hits of 2 branches = 100.00%
 
 ------------------------------------CASE Branch------------------------------------
-    234                                    94000     Count coming in to CASE
-    235             1                      12505     
-    238             1                      11514     
-    241             1                      11007     
-    244             1                      11935     
-    247             1                      11869     
-    250             1                      11634     
-    253             1                      11589     
-    256             1                      11947     
+    261                                    94000     Count coming in to CASE
+    262             1                      12505     
+    265             1                      11514     
+    268             1                      11007     
+    271             1                      11935     
+    274             1                      11869     
+    277             1                      11634     
+    280             1                      11589     
+    283             1                      11947     
                                          ***0***     All False Count
 Branch totals: 8 hits of 9 branches = 88.88%
 
 ------------------------------------CASE Branch------------------------------------
-    274                                    76338     Count coming in to CASE
-    275             1                      10973     
-    278             1                       9775     
-    281             1                       8638     
-    284             1                       9566     
-    287             1                      10337     
-    290             1                       9895     
-    293             1                       8398     
-    296             1                       8756     
+    301                                    76338     Count coming in to CASE
+    302             1                      10973     
+    305             1                       9775     
+    308             1                       8638     
+    311             1                       9566     
+    314             1                      10337     
+    317             1                       9895     
+    320             1                       8398     
+    323             1                       8756     
                                          ***0***     All False Count
 Branch totals: 8 hits of 9 branches = 88.88%
 
@@ -29060,26 +29028,26 @@ Condition Coverage for instance /KnightsTour_tb_tour_move/iDUT/iTL --
 
   File ../src/TourLogic.sv
 ----------------Focused Condition View-------------------
-Line       174 Item    1  (move_num == 23)
+Line       189 Item    1  (move_num == 23)
 Condition totals: 1 of 1 input term covered = 100.00%
 
 ----------------Focused Condition View-------------------
-Line       179 Item    1  (move_try != 128)
+Line       198 Item    1  (move_try != 128)
 Condition totals: 1 of 1 input term covered = 100.00%
 
 ----------------Focused Condition View-------------------
-Line       188 Item    1  (last_move[move_num-1] == 128)
+Line       211 Item    1  (last_move[move_num-1] == 128)
 Condition totals: 1 of 1 input term covered = 100.00%
 
 ----------------Focused Condition View-------------------
-Line       211 Item    1  (((xpos + off_x(try)) < 5) && ((ypos + off_y(try)) < 5))
+Line       238 Item    1  (((xpos + off_x(try)) < 5) && ((ypos + off_y(try)) < 5))
 Condition totals: 2 of 2 input terms covered = 100.00%
 
 
 Statement Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Statements                     100       100         0   100.00%
+    Statements                      99        99         0   100.00%
 
 ================================Statement Details================================
 
@@ -29089,109 +29057,108 @@ Statement Coverage for instance /KnightsTour_tb_tour_move/iDUT/iTL --
     ----         ----                      -----     ------ 
   File ../src/TourLogic.sv
     28              1                      64066     
-    30              1                          2     
-    32              1                          1     
-    34              1                          1     
-    36              1                       6505     
-    38              1                       6481     
-    42              1                      64065     
-    44              1                          2     
-    46              1                          1     
-    48              1                       6505     
-    50              1                       6481     
-    54              1                      64065     
-    56              1                          2     
-    58              1                          1     
-    60              1                       6505     
-    62              1                       6481     
-    66              1                      64946     
-    68              1                          2     
+    33              1                          2     
+    33              2                         10     
+    34              1                         10     
+    34              2                         50     
+    35              1                         50     
+    42              1                          1     
+    42              2                          5     
+    43              1                          5     
+    43              2                         25     
+    44              1                         25     
+    50              1                          1     
+    54              1                       6505     
+    57              1                       6481     
+    63              1                      64065     
+    66              1                          2     
+    68              1                          1     
     70              1                       6505     
-    72              1                      39874     
-    74              1                       6481     
-    79              1                      13013     
-    81              1                          2     
+    72              1                       6481     
+    76              1                      64065     
+    79              1                          2     
+    81              1                          1     
     83              1                       6505     
-    85              1                       6506     
-    90              1                      19495     
+    85              1                       6481     
+    89              1                      64946     
     92              1                          2     
     94              1                       6505     
-    99              1                      24247     
-    101             1                          2     
-    103             1                       6505     
-    105             1                       6481     
-    109             1                      58446     
-    111             1                          2     
-    113             1                       6505     
-    121             1                      24169     
-    123             1                          2     
-    125             1                      24167     
-    129             1                      64949     
-    131             1                      64949     
-    132             1                      64949     
-    133             1                      64949     
-    134             1                      64949     
-    135             1                      64949     
-    136             1                      64949     
-    137             1                      64949     
-    138             1                      64949     
-    139             1                      64949     
-    140             1                      64949     
-    141             1                      64949     
-    142             1                      64949     
-    143             1                      64949     
-    151             1                          1     
-    152             1                          1     
-    156             1                          2     
-    157             1                          2     
-    162             1                       6505     
-    163             1                       6505     
-    164             1                       6505     
-    170             1                       6505     
-    171             1                       6505     
-    172             1                       6505     
-    173             1                       6505     
-    175             1                          1     
-    176             1                          1     
-    178             1                       6504     
-    180             1                      39874     
-    182             1                       5577     
-    186             1                       6481     
-    187             1                       6481     
-    189             1                        904     
-    191             1                       5577     
-    197             1                       6018     
-    208             1                       6505     
-    209             1                       6505     
-    210             1                       6505     
-    210             2                      52040     
-    213             1                       6525     
-    216             1                      52040     
-    218             1                       6505     
-    230             1                      94000     
-    236             1                      12505     
-    239             1                      11514     
-    242             1                      11007     
-    245             1                      11935     
-    248             1                      11869     
-    251             1                      11634     
-    254             1                      11589     
-    257             1                      11947     
-    260             1                      94000     
-    272             1                      76338     
-    276             1                      10973     
-    279             1                       9775     
-    282             1                       8638     
-    285             1                       9566     
-    288             1                      10337     
-    291             1                       9895     
-    294             1                       8398     
-    297             1                       8756     
-    300             1                      76338     
+    96              1                      39874     
+    98              1                       6481     
+    103             1                      13013     
+    106             1                          2     
+    108             1                       6505     
+    110             1                       6506     
+    115             1                      19493     
+    118             1                       6505     
+    123             1                      24247     
+    126             1                          2     
+    128             1                       6505     
+    130             1                       6481     
+    134             1                      58444     
+    137             1                       6505     
+    146             1                      24169     
+    148             1                          2     
+    150             1                      24167     
+    154             1                      64949     
+    156             1                      64949     
+    157             1                      64949     
+    158             1                      64949     
+    159             1                      64949     
+    160             1                      64949     
+    161             1                      64949     
+    162             1                      64949     
+    163             1                      64949     
+    169             1                          1     
+    170             1                          1     
+    174             1                          2     
+    175             1                          2     
+    180             1                       6505     
+    181             1                       6505     
+    186             1                      51956     
+    188             1                       6505     
+    190             1                          1     
+    191             1                          1     
+    195             1                       6504     
+    199             1                      39874     
+    204             1                       5577     
+    209             1                       6481     
+    210             1                       6481     
+    213             1                        904     
+    217             1                       5577     
+    221             1                          2     
+    225             1                       6017     
+    235             1                       6505     
+    236             1                       6505     
+    237             1                       6505     
+    237             2                      52040     
+    240             1                       6525     
+    243             1                      52040     
+    245             1                       6505     
+    257             1                      94000     
+    263             1                      12505     
+    266             1                      11514     
+    269             1                      11007     
+    272             1                      11935     
+    275             1                      11869     
+    278             1                      11634     
+    281             1                      11589     
+    284             1                      11947     
+    287             1                      94000     
+    299             1                      76338     
+    303             1                      10973     
+    306             1                       9775     
+    309             1                       8638     
+    312             1                       9566     
+    315             1                      10337     
+    318             1                       9895     
+    321             1                       8398     
+    324             1                       8756     
+    327             1                      76338     
 Toggle Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Toggles                        138        74        64    53.62%
+    Toggles                        128        64        64    50.00%
 
 ================================Toggle Details================================
 
@@ -29203,11 +29170,11 @@ Toggle Coverage for instance /KnightsTour_tb_tour_move/iDUT/iTL --
                                              state               ENUM type       Value       Count 
                                            x[0-31]           0           0                                0.00 
 
-Total Node Count     =         74 
-Toggled Node Count   =         42 
+Total Node Count     =         69 
+Toggled Node Count   =         37 
 Untoggled Node Count =         32 
 
-Toggle Coverage      =      53.62% (74 of 138 bins)
+Toggle Coverage      =      50.00% (64 of 128 bins)
 
 =================================================================================
 === Instance: /KnightsTour_tb_tour_move/iDUT/iTC
@@ -29246,7 +29213,7 @@ Branch totals: 2 hits of 2 branches = 100.00%
 Branch totals: 1 hit of 2 branches = 50.00%
 
 ------------------------------------CASE Branch------------------------------------
-    86                                         4     Count coming in to CASE
+    86                                         3     Count coming in to CASE
     87              1                          1     
     92              1                    ***0***     
     97              1                    ***0***     
@@ -29255,7 +29222,7 @@ Branch totals: 1 hit of 2 branches = 50.00%
     112             1                    ***0***     
     117             1                    ***0***     
     122             1                    ***0***     
-    127             1                          2     
+    127             1                          1     
 Branch totals: 3 hits of 9 branches = 33.33%
 
 ------------------------------------IF Branch------------------------------------
@@ -29385,7 +29352,7 @@ Statement Coverage for instance /KnightsTour_tb_tour_move/iDUT/iTC --
     Line         Item                      Count     Source 
     ----         ----                      -----     ------ 
   File ../src/TourCmd.sv
-    42              1                          4     
+    42              1                          3     
     56              1                          7     
     59              1                          2     
     61              1                          1     
@@ -29394,7 +29361,7 @@ Statement Coverage for instance /KnightsTour_tb_tour_move/iDUT/iTC --
     72              1                          2     
     75              1                    ***0***     
     77              1                          2     
-    85              1                          4     
+    85              1                          3     
     88              1                          1     
     89              1                          1     
     93              1                    ***0***     
@@ -29411,8 +29378,8 @@ Statement Coverage for instance /KnightsTour_tb_tour_move/iDUT/iTC --
     119             1                    ***0***     
     123             1                    ***0***     
     124             1                    ***0***     
-    128             1                          2     
-    129             1                          2     
+    128             1                          1     
+    129             1                          1     
     135             1                          6     
     137             1                         45     
     146             1                          9     
@@ -31065,7 +31032,7 @@ Toggle Coverage      =      58.63% (129 of 220 bins)
 Toggle Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Toggles                        250       182        68    72.80%
+    Toggles                        250       181        69    72.40%
 
 ================================Toggle Details================================
 
@@ -31081,6 +31048,7 @@ Toggle Coverage for instance /KnightsTour_tb_tour_move/iDUT --
                                       cmd_UART[14]           0           1                               50.00 
                                       cmd_UART[15]           0           0                                0.00 
                                         frwrd[0-4]           0           0                                0.00 
+                                           move[0]           1           0                               50.00 
                                          move[1-3]           0           0                                0.00 
                                            move[4]           0           1                               50.00 
                                          move[5-7]           0           0                                0.00 
@@ -31098,10 +31066,10 @@ Toggle Coverage for instance /KnightsTour_tb_tour_move/iDUT --
                                              rst_n           0           1                               50.00 
 
 Total Node Count     =        125 
-Toggled Node Count   =         83 
-Untoggled Node Count =         42 
+Toggled Node Count   =         82 
+Untoggled Node Count =         43 
 
-Toggle Coverage      =      72.80% (182 of 250 bins)
+Toggle Coverage      =      72.40% (181 of 250 bins)
 
 =================================================================================
 === Instance: /KnightsTour_tb_tour_move/iRMT/iU_RCOM/iTX
@@ -33287,5 +33255,5 @@ Untoggled Node Count =         51
 Toggle Coverage      =      39.87% (63 of 158 bins)
 
 
-Total Coverage By Instance (filtered view): 59.50%
+Total Coverage By Instance (filtered view): 59.48%
 
