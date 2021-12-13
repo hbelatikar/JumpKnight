@@ -14,7 +14,7 @@ module SPI_mnrch (
 	);
 	
 	logic MISO_smpl, fall_imminent, rise_imminent, ld_SCLK;
-	logic init, shift, set_done, smpl;
+	logic init, shift, set_done, smpl, done15;
 	logic [3:0] bit_cntr;
 	logic [4:0] SCLK_div;
 	logic [15:0] shft_reg;

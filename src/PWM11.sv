@@ -7,7 +7,7 @@ module PWM11 (
 	
 	//localparam SYS_CLK = 500000000;
 	
-	logic [10:0] cnt = 11'h0;
+	logic [10:0] cnt;
 	
 	assign PWM_sig_n = ~PWM_sig;
 	
