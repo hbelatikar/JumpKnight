@@ -8,3 +8,5 @@ transcript
 *.syn
 *.mr
 *.svf
+**/ucdb/
+
