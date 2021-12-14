@@ -6,6 +6,13 @@ read_file -format sverilog {../src/KnightsTour.sv ../src/charge.sv ../src/cmd_pr
                             ../src/PWM11.sv ../src/reset_synch.sv ../src/SPI_mnrch.sv ../src/TourCmd.sv \
                             ../src/TourLogic.sv ../src/UART.sv ../src/UART_rx.sv ../src/UART_tx.sv \
                             ../src/UART_wrapper.sv}
+
+#read_file -format sverilog {KnightsTour.sv charge.sv cmd_proc.sv inert_intf.sv \
+#                            inertial_integrator.sv IR_intf.sv MtrDrv.sv PID.sv \
+#                            PWM11.sv reset_synch.sv SPI_mnrch.sv TourCmd.sv \
+#                            TourLogic.sv UART.sv UART_rx.sv UART_tx.sv \
+#                           UART_wrapper.sv}
+
 link
 
 ##################################################
@@ -64,15 +71,15 @@ compile -map_effort medium
 ##########################################
 ##### Generate Timing & Are Reports  #####
 ##########################################
-report_timing -delay max > KnightsTour_max_delay.txt
-report_timing -delay min > KnightsTour_min_delay.txt
-report_area > KnightsTour_area.txt
+report_timing -delay max > outputs/KnightsTour_max_delay.txt
+report_timing -delay min > outputs/KnightsTour_min_delay.txt
+report_area > outputs/KnightsTour_area.txt
 
 ##########################################
 ##### Write out resulting netlist ########
 ##########################################
-write -format verilog KnightsTour -output KnightsTour.vg
-write_sdc KnightsTour.sdc
+write -format verilog KnightsTour -output outputs/KnightsTour.vg
+write_sdc outputs/KnightsTour.sdc
 
 ##########################################
 ### Exit from Synopsys Design Compiler ###
