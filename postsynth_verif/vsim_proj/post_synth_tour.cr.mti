@@ -1,11 +1,4 @@
-/filespace/b/belatikar/ECE551/project/JumpKnight/synth/KnightsTour.vg {1 {vlog -work work -vopt -stats=none /filespace/b/belatikar/ECE551/project/JumpKnight/synth/KnightsTour.vg
-QuestaSim vlog 2021.2_2 Compiler 2021.06 Jun 19 2021
--- Compiling module KnightsTour
-
-Top level modules:
-	KnightsTour
-
-} {} {}} /filespace/b/belatikar/ECE551/project/JumpKnight/src/UART_rx.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/b/belatikar/ECE551/project/JumpKnight/src/UART_rx.sv
+/filespace/b/belatikar/ECE551/project/JumpKnight/src/UART_rx.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/b/belatikar/ECE551/project/JumpKnight/src/UART_rx.sv
 QuestaSim vlog 2021.2_2 Compiler 2021.06 Jun 19 2021
 -- Compiling module UART_rx
 
@@ -76,12 +69,12 @@ QuestaSim vlog 2021.2_2 Compiler 2021.06 Jun 19 2021
 Top level modules:
 	IR_intf
 
-} {} {}} /filespace/b/belatikar/ECE551/project/JumpKnight/src/PID_non_pipe.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/b/belatikar/ECE551/project/JumpKnight/src/PID_non_pipe.sv
+} {} {}} /filespace/b/belatikar/ECE551/project/JumpKnight/src/UART_wrapper.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/b/belatikar/ECE551/project/JumpKnight/src/UART_wrapper.sv
 QuestaSim vlog 2021.2_2 Compiler 2021.06 Jun 19 2021
--- Compiling module PID_non_pipe
+-- Compiling module UART_wrapper
 
 Top level modules:
-	PID_non_pipe
+	UART_wrapper
 
 } {} {}} /filespace/b/belatikar/ECE551/project/JumpKnight/src/UART.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/b/belatikar/ECE551/project/JumpKnight/src/UART.sv
 QuestaSim vlog 2021.2_2 Compiler 2021.06 Jun 19 2021
@@ -90,12 +83,12 @@ QuestaSim vlog 2021.2_2 Compiler 2021.06 Jun 19 2021
 Top level modules:
 	UART
 
-} {} {}} /filespace/b/belatikar/ECE551/project/JumpKnight/src/UART_wrapper.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/b/belatikar/ECE551/project/JumpKnight/src/UART_wrapper.sv
+} {} {}} /filespace/b/belatikar/ECE551/project/JumpKnight/src/PID_non_pipe.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/b/belatikar/ECE551/project/JumpKnight/src/PID_non_pipe.sv
 QuestaSim vlog 2021.2_2 Compiler 2021.06 Jun 19 2021
--- Compiling module UART_wrapper
+-- Compiling module PID_non_pipe
 
 Top level modules:
-	UART_wrapper
+	PID_non_pipe
 
 } {} {}} /filespace/b/belatikar/ECE551/project/JumpKnight/src/PID.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/b/belatikar/ECE551/project/JumpKnight/src/PID.sv
 QuestaSim vlog 2021.2_2 Compiler 2021.06 Jun 19 2021
@@ -104,13 +97,12 @@ QuestaSim vlog 2021.2_2 Compiler 2021.06 Jun 19 2021
 Top level modules:
 	PID
 
-} {} {}} /filespace/b/belatikar/ECE551/project/JumpKnight/testbench/knight_test_postsynth/KnightsTour_tb_PWM_NEMO_check_postsynth.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/b/belatikar/ECE551/project/JumpKnight/testbench/knight_test_postsynth/KnightsTour_tb_PWM_NEMO_check_postsynth.sv
+} {} {}} /filespace/b/belatikar/ECE551/project/JumpKnight/src/TourCmd.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/b/belatikar/ECE551/project/JumpKnight/src/TourCmd.sv
 QuestaSim vlog 2021.2_2 Compiler 2021.06 Jun 19 2021
--- Compiling module KnightsTour_tb_PWM_NEMO_check
--- Importing package test_package
+-- Compiling module TourCmd
 
 Top level modules:
-	KnightsTour_tb_PWM_NEMO_check
+	TourCmd
 
 } {} {}} /filespace/b/belatikar/ECE551/project/JumpKnight/src/inertial_integrator.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/b/belatikar/ECE551/project/JumpKnight/src/inertial_integrator.sv
 QuestaSim vlog 2021.2_2 Compiler 2021.06 Jun 19 2021
@@ -119,12 +111,12 @@ QuestaSim vlog 2021.2_2 Compiler 2021.06 Jun 19 2021
 Top level modules:
 	inertial_integrator
 
-} {} {}} /filespace/b/belatikar/ECE551/project/JumpKnight/src/TourCmd.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/b/belatikar/ECE551/project/JumpKnight/src/TourCmd.sv
+} {} {}} /filespace/b/belatikar/ECE551/project/JumpKnight/synth/outputs/KnightsTour.vg {1 {vlog -work work -vopt -stats=none /filespace/b/belatikar/ECE551/project/JumpKnight/synth/outputs/KnightsTour.vg
 QuestaSim vlog 2021.2_2 Compiler 2021.06 Jun 19 2021
--- Compiling module TourCmd
+-- Compiling module KnightsTour
 
 Top level modules:
-	TourCmd
+	KnightsTour
 
 } {} {}} /filespace/b/belatikar/ECE551/project/JumpKnight/src/SPI_iNEMO4.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/b/belatikar/ECE551/project/JumpKnight/src/SPI_iNEMO4.sv
 QuestaSim vlog 2021.2_2 Compiler 2021.06 Jun 19 2021
@@ -132,6 +124,13 @@ QuestaSim vlog 2021.2_2 Compiler 2021.06 Jun 19 2021
 
 Top level modules:
 	SPI_iNEMO4
+
+} {} {}} /filespace/b/belatikar/ECE551/project/JumpKnight/src/TourLogic.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/b/belatikar/ECE551/project/JumpKnight/src/TourLogic.sv
+QuestaSim vlog 2021.2_2 Compiler 2021.06 Jun 19 2021
+-- Compiling module TourLogic
+
+Top level modules:
+	TourLogic
 
 } {} {}} /filespace/b/belatikar/ECE551/project/JumpKnight/src/KnightPhysics.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/b/belatikar/ECE551/project/JumpKnight/src/KnightPhysics.sv
 QuestaSim vlog 2021.2_2 Compiler 2021.06 Jun 19 2021
@@ -141,12 +140,13 @@ QuestaSim vlog 2021.2_2 Compiler 2021.06 Jun 19 2021
 Top level modules:
 	KnightPhysics
 
-} {} {}} /filespace/b/belatikar/ECE551/project/JumpKnight/src/TourLogic.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/b/belatikar/ECE551/project/JumpKnight/src/TourLogic.sv
+} {} {}} /filespace/b/belatikar/ECE551/project/JumpKnight/testbench/knight_tests_postsynth/KnightsTour_tb_PWM_NEMO_check_postsynth.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/b/belatikar/ECE551/project/JumpKnight/testbench/knight_tests_postsynth/KnightsTour_tb_PWM_NEMO_check_postsynth.sv
 QuestaSim vlog 2021.2_2 Compiler 2021.06 Jun 19 2021
--- Compiling module TourLogic
+-- Compiling module KnightsTour_tb_PWM_NEMO_check_postsynth
+-- Importing package test_package
 
 Top level modules:
-	TourLogic
+	KnightsTour_tb_PWM_NEMO_check_postsynth
 
 } {} {}} /filespace/b/belatikar/ECE551/project/JumpKnight/src/inert_intf.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/b/belatikar/ECE551/project/JumpKnight/src/inert_intf.sv
 QuestaSim vlog 2021.2_2 Compiler 2021.06 Jun 19 2021

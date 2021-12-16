@@ -7,7 +7,7 @@ Report : timing
         -max_paths 1
 Design : KnightsTour
 Version: S-2021.06
-Date   : Mon Dec 13 18:46:42 2021
+Date   : Mon Dec 13 23:36:12 2021
 ****************************************
 
 Operating Conditions: tt0p85v25c   Library: saed32lvt_tt0p85v25c

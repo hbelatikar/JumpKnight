@@ -101,6 +101,25 @@ module KnightsTour_tb_PWM_NEMO_check_postsynth();
         end
     join
 
+    fork
+        begin : Send_cal	
+            $display("TEST-1.3 : Sending cal command.");
+	    send_RCOM_command (.cmd_to_snd(16'h0000), .cmd(cmd), .snd_cmd(send_cmd), .clk(clk));
+            $display("command sent.");
+		repeat(10000)@(posedge clk)
+            disable timeout_send_cal;
+        end
+        
+        begin : timeout_send_cal
+            check_timeout(.clk(clk), .cycles_to_wait(500000), .test_error("NEMO did not set up"));
+            test_fail = 1'b1;
+		disable Send_cal;
+        end
+    join
+
+
+
+
     happy_msg_printer(.test_fail(test_fail), .test_name("TEST 1.1 - PWM Values Check"), .test_file(output_file), .stop_test(1'b0));
     happy_msg_printer(.test_fail(test_fail), .test_name("TEST 1.2 - NEMO Setup"), .test_file(output_file), .stop_test(1'b1));
 
